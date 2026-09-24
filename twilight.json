@@ -1667,7 +1667,7 @@
                 "en": "RAIH Video reels",
                 "ar": "فيديوهات المنتجات (رايح)"
             },
-            "icon": "sicon-video",
+            "icon": "sicon-play-circle",
             "path": "home.raih-reels",
             "fields": [
                 {
