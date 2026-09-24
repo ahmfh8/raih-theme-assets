@@ -187,12 +187,12 @@
         {
             "id": "raih_whatsapp_number",
             "label": "رقم واتساب الدعم",
-            "description": "بالصيغة الدولية بدون + أو أصفار، مثل 9665XXXXXXXX. اتركه فارغًا لإخفاء الزر",
+            "description": "بالصيغة الدولية بدون + أو أصفار، مثل 9665XXXXXXXX. إذا تركته فارغًا يُستخدم الرقم الافتراضي 966509038395",
             "type": "string",
             "icon": "sicon-format-text-alt",
             "format": "text",
             "required": false,
-            "value": "",
+            "value": "966509038395",
             "placeholder": "9665XXXXXXXX",
             "minLength": 0,
             "maxLength": "160"
