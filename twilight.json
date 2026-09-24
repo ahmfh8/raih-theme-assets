@@ -1662,6 +1662,142 @@
             ]
         },
         {
+            "key": "a72dea37-edd4-42f4-ba5a-28e1bce9f481",
+            "title": {
+                "en": "RAIH Video reels",
+                "ar": "فيديوهات المنتجات (رايح)"
+            },
+            "icon": "sicon-video",
+            "path": "home.raih-reels",
+            "fields": [
+                {
+                    "type": "static",
+                    "format": "description",
+                    "id": "raih-reels-note",
+                    "value": "<div>بطاقات فيديو عمودية (9:16) تفتح عارضًا مثل تيك توك، وتحت كل فيديو بطاقة المنتج بزر «أضف للسلة». الفيديو رابط https لملف MP4 (مثل Bunny.net)، ولا يتحمّل أي فيديو قبل الضغط. إذا تركت صورة الغلاف فارغة تُستخدم صورة المنتج. الحد 12 فيديو.</div>"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "السطر الصغير فوق العنوان",
+                    "id": "eyebrow",
+                    "value": "فيديوهات مرتبطة بالمنتجات",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 60
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "عنوان القسم",
+                    "id": "title",
+                    "value": "شاهد المنتج أثناء الاستخدام",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 60
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الوصف",
+                    "id": "description",
+                    "value": "شوف الحجم والأداء قبل تطلب، وافتح المنتج من داخل الفيديو.",
+                    "format": "textarea",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 160
+                },
+                {
+                    "id": "reels",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": false,
+                    "minLength": 0,
+                    "maxLength": 12,
+                    "label": "الفيديوهات",
+                    "item_label": "فيديو",
+                    "value": [],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-link",
+                            "label": "رابط الفيديو (MP4)",
+                            "id": "reels.video_url",
+                            "value": null,
+                            "format": "text",
+                            "required": false,
+                            "description": "رابط https مباشر لملف MP4 بنسبة 9:16",
+                            "placeholder": "https://…/video.mp4",
+                            "minLength": 0,
+                            "maxLength": 500
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-image",
+                            "label": "رابط صورة الغلاف (اختياري)",
+                            "id": "reels.poster_url",
+                            "value": null,
+                            "format": "text",
+                            "required": false,
+                            "description": "فارغ = صورة المنتج",
+                            "placeholder": "https://…/poster.webp",
+                            "minLength": 0,
+                            "maxLength": 500
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "عنوان الفيديو",
+                            "id": "reels.title",
+                            "value": null,
+                            "format": "text",
+                            "required": false,
+                            "description": null,
+                            "placeholder": null,
+                            "minLength": 0,
+                            "maxLength": 60
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "ملاحظة قصيرة",
+                            "id": "reels.note",
+                            "value": null,
+                            "format": "text",
+                            "required": false,
+                            "description": null,
+                            "placeholder": null,
+                            "minLength": 0,
+                            "maxLength": 90
+                        },
+                        {
+                            "type": "items",
+                            "icon": "sicon-packed-box",
+                            "label": "المنتج في الفيديو",
+                            "id": "reels.product",
+                            "format": "dropdown-list",
+                            "description": null,
+                            "selected": [],
+                            "options": [],
+                            "required": false,
+                            "multichoice": false,
+                            "source": "products",
+                            "searchable": true,
+                            "value": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "key": "186b3f4f-25cf-4d3c-abca-cef7eed6f0ab",
             "title": {
                 "en": "Enhances Animated Images",
