@@ -80,8 +80,11 @@
   document.addEventListener('DOMContentLoaded', function () {
     if (!window.Salla || !Salla.onReady) { return; }
     Salla.onReady(function () {
-      salla.cart.quickAdd = function (id, quantity) { return demoAdd(id, quantity); };
-      salla.cart.addItem = function (data) {
+      /* salla.cart itself cannot be patched; its add calls go through salla.api.cart */
+      var api = salla.api && salla.api.cart;
+      if (!api) { return; }
+      api.quickAdd = function (id, quantity) { return demoAdd(id, quantity); };
+      api.addItem = function (data) {
         var id = typeof data === 'object' ? (pick(data, 'id') || pick(data, 'product_id')) : data;
         return demoAdd(id, pick(data, 'quantity'));
       };
@@ -100,8 +103,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <script defer data-cfasync="false" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/product-card.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/main-menu.js"></script>
+    <script defer data-cfasync="false" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/product-card.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/main-menu.js"></script>
     
     
 
@@ -173,7 +176,7 @@
 <meta name="twitter:url" content="https://salla.design/dev-ypwvvihy5rlvhifb">
 <meta name="twitter:site" content="@SallaApp">
 <meta name="twitter:creator" content="@SallaApp">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"متجر تجريبي","description":"متجر تجريبي - Demo Store","url":"https://salla.design/dev-ypwvvihy5rlvhifb","logo":"https://salla-dev.s3.eu-central-1.amazonaws.com/logo/logo-fashion.jpg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","description":"متجر تجريبي - Demo Store","url":"https://salla.design/dev-ypwvvihy5rlvhifb"}</script>        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/app.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"متجر تجريبي","description":"متجر تجريبي - Demo Store","url":"https://salla.design/dev-ypwvvihy5rlvhifb","logo":"https://salla-dev.s3.eu-central-1.amazonaws.com/logo/logo-fashion.jpg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","description":"متجر تجريبي - Demo Store","url":"https://salla.design/dev-ypwvvihy5rlvhifb"}</script>        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/app.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap">
         <link rel="stylesheet" href="https://cdn.salla.network/fonts/sallaicons.css?v=2.0.5"/>
 
@@ -286,8 +289,8 @@ window.dataLayer.push({"page":{"fingerprint":"","pageName":"home","mobileApp":0,
          
          style="--raih-focus-m: 15% 80%;">
       <picture class="raih-hero__media">
-                            <source media="(prefers-color-scheme: dark)" data-raih-dark sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px" srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-city-night-matched-v3-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-city-night-matched-v3-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-city-night-matched-v3.webp 1672w">
-                <img srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-city-day-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-city-day-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-city-day.webp 1672w" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-city-day.webp" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px"
+                            <source media="(prefers-color-scheme: dark)" data-raih-dark sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px" srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-city-night-matched-v3-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-city-night-matched-v3-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-city-night-matched-v3.webp 1672w">
+                <img srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-city-day-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-city-day-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-city-day.webp 1672w" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-city-day.webp" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px"
              width="1672" height="941" alt="سكوتر كهربائي في طريق مدينة" decoding="async"
              fetchpriority="high" loading="eager">
       </picture>
@@ -313,8 +316,8 @@ window.dataLayer.push({"page":{"fingerprint":"","pageName":"home","mobileApp":0,
          aria-hidden="true" inert
          style="--raih-focus-m: 15% 80%;">
       <picture class="raih-hero__media">
-                            <source media="(prefers-color-scheme: dark)" data-raih-dark sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px" data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-power-night-matched-v3-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-power-night-matched-v3-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-power-night-matched-v3.webp 1672w">
-                <img data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-power-day-v2-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-power-day-v2-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-power-day-v2.webp 1672w" data-src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-power-day-v2.webp" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px"
+                            <source media="(prefers-color-scheme: dark)" data-raih-dark sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px" data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-power-night-matched-v3-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-power-night-matched-v3-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-power-night-matched-v3.webp 1672w">
+                <img data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-power-day-v2-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-power-day-v2-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-power-day-v2.webp 1672w" data-src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-power-day-v2.webp" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px"
              width="1672" height="941" alt="سكوتر كهربائي قوي على طريق مفتوح" decoding="async"
              loading="lazy">
       </picture>
@@ -340,8 +343,8 @@ window.dataLayer.push({"page":{"fingerprint":"","pageName":"home","mobileApp":0,
          aria-hidden="true" inert
          style="--raih-focus-m: 15% 80%;">
       <picture class="raih-hero__media">
-                            <source media="(prefers-color-scheme: dark)" data-raih-dark sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px" data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-kids-yard-night-matched-v3-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-kids-yard-night-matched-v3-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-kids-yard-night-matched-v3.webp 1672w">
-                <img data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-kids-yard-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-kids-yard-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-kids-yard.webp 1672w" data-src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-kids-yard.webp" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px"
+                            <source media="(prefers-color-scheme: dark)" data-raih-dark sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px" data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-kids-yard-night-matched-v3-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-kids-yard-night-matched-v3-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-kids-yard-night-matched-v3.webp 1672w">
+                <img data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-kids-yard-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-kids-yard-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-kids-yard.webp 1672w" data-src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-kids-yard.webp" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px"
              width="1672" height="941" alt="طفل يقود سيارة كهربائية في حوش المنزل" decoding="async"
              loading="lazy">
       </picture>
@@ -367,8 +370,8 @@ window.dataLayer.push({"page":{"fingerprint":"","pageName":"home","mobileApp":0,
          aria-hidden="true" inert
          style="--raih-focus-m: 15% 80%;">
       <picture class="raih-hero__media">
-                            <source media="(prefers-color-scheme: dark)" data-raih-dark sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px" data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-commute-night-matched-v3-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-commute-night-matched-v3-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-commute-night-matched-v3.webp 1672w">
-                <img data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-commute-light-v2-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-commute-light-v2-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-commute-light-v2.webp 1672w" data-src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/hero-commute-light-v2.webp" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px"
+                            <source media="(prefers-color-scheme: dark)" data-raih-dark sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px" data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-commute-night-matched-v3-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-commute-night-matched-v3-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-commute-night-matched-v3.webp 1672w">
+                <img data-srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-commute-light-v2-860w.webp 860w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-commute-light-v2-1280w.webp 1280w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-commute-light-v2.webp 1672w" data-src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/hero-commute-light-v2.webp" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 58vw, (max-width: 1615px) 46vw, 746px"
              width="1672" height="941" alt="سكوتر كهربائي في شارع سعودي" decoding="async"
              loading="lazy">
       </picture>
@@ -451,7 +454,7 @@ window.dataLayer.push({"page":{"fingerprint":"","pageName":"home","mobileApp":0,
   <span class="raih-installbar__text">قسّطها وارتاح</span>
   <span class="raih-installbar__logos">
     <img data-provider="tabby_installment" alt="tabby" height="22" decoding="async">
-        <img data-provider="tamara_installment" data-src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/tamara-logo-badge-en.svg" alt="tamara" height="22" decoding="async">
+        <img data-provider="tamara_installment" data-src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/tamara-logo-badge-en.svg" alt="tamara" height="22" decoding="async">
   </span>
 </div>
 <span id="after-648105136" class="s-design-invisible-dom s-design-after">
@@ -470,64 +473,64 @@ window.dataLayer.push({"page":{"fingerprint":"","pageName":"home","mobileApp":0,
   <div class="raih-cats__grid">
                                                                                   <a class="raih-cat" href="search.html">
         <span class="raih-cat__thumb raih-cat__thumb--soft" aria-hidden="true">
-                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-new-offers-surface-v4-320w.webp"
-                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-new-offers-surface-v4-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-new-offers-surface-v4-480w.webp 480w"
+                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-new-offers-surface-v4-320w.webp"
+                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-new-offers-surface-v4-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-new-offers-surface-v4-480w.webp 480w"
                  sizes="(max-width: 560px) 76px, (max-width: 1023px) 96px, 120px" alt="" width="120" height="120" loading="lazy" decoding="async">
                   </span>
         <span class="raih-cat__name">العروض</span>
       </a>
                                                                                   <a class="raih-cat" href="search.html">
         <span class="raih-cat__thumb raih-cat__thumb--navy" aria-hidden="true">
-                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-scooter-v3-320w.webp"
-                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-scooter-v3-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-scooter-v3-480w.webp 480w"
+                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-scooter-v3-320w.webp"
+                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-scooter-v3-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-scooter-v3-480w.webp 480w"
                  sizes="(max-width: 560px) 76px, (max-width: 1023px) 96px, 120px" alt="" width="120" height="120" loading="lazy" decoding="async">
                   </span>
         <span class="raih-cat__name">سكوترات</span>
       </a>
                                                                                   <a class="raih-cat" href="search.html">
         <span class="raih-cat__thumb raih-cat__thumb--warm" aria-hidden="true">
-                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-kids-car-v3-320w.webp"
-                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-kids-car-v3-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-kids-car-v3-480w.webp 480w"
+                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-kids-car-v3-320w.webp"
+                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-kids-car-v3-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-kids-car-v3-480w.webp 480w"
                  sizes="(max-width: 560px) 76px, (max-width: 1023px) 96px, 120px" alt="" width="120" height="120" loading="lazy" decoding="async">
                   </span>
         <span class="raih-cat__name">سيارات أطفال</span>
       </a>
                                                                                   <a class="raih-cat" href="search.html">
         <span class="raih-cat__thumb raih-cat__thumb--stone" aria-hidden="true">
-                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-bike-atv-v4-320w.webp"
-                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-bike-atv-v4-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-bike-atv-v4-480w.webp 480w"
+                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-bike-atv-v4-320w.webp"
+                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-bike-atv-v4-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-bike-atv-v4-480w.webp 480w"
                  sizes="(max-width: 560px) 76px, (max-width: 1023px) 96px, 120px" alt="" width="120" height="120" loading="lazy" decoding="async">
                   </span>
         <span class="raih-cat__name">دراجات ودبابات</span>
       </a>
                                                                                   <a class="raih-cat" href="search.html">
         <span class="raih-cat__thumb raih-cat__thumb--mist" aria-hidden="true">
-                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-drift-v3-320w.webp"
-                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-drift-v3-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-drift-v3-480w.webp 480w"
+                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-drift-v3-320w.webp"
+                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-drift-v3-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-drift-v3-480w.webp 480w"
                  sizes="(max-width: 560px) 76px, (max-width: 1023px) 96px, 120px" alt="" width="120" height="120" loading="lazy" decoding="async">
                   </span>
         <span class="raih-cat__name">درفت</span>
       </a>
                                                                                   <a class="raih-cat" href="search.html">
         <span class="raih-cat__thumb raih-cat__thumb--stone" aria-hidden="true">
-                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-parts-v3-320w.webp"
-                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-parts-v3-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-parts-v3-480w.webp 480w"
+                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-parts-v3-320w.webp"
+                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-parts-v3-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-parts-v3-480w.webp 480w"
                  sizes="(max-width: 560px) 76px, (max-width: 1023px) 96px, 120px" alt="" width="120" height="120" loading="lazy" decoding="async">
                   </span>
         <span class="raih-cat__name">قطع غيار</span>
       </a>
                                                                                   <a class="raih-cat" href="search.html">
         <span class="raih-cat__thumb raih-cat__thumb--soft" aria-hidden="true">
-                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-accessories-surface-v4-320w.webp"
-                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-accessories-surface-v4-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-accessories-surface-v4-480w.webp 480w"
+                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-accessories-surface-v4-320w.webp"
+                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-accessories-surface-v4-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-accessories-surface-v4-480w.webp 480w"
                  sizes="(max-width: 560px) 76px, (max-width: 1023px) 96px, 120px" alt="" width="120" height="120" loading="lazy" decoding="async">
                   </span>
         <span class="raih-cat__name">إكسسوارات</span>
       </a>
                                                                                   <a class="raih-cat" href="search.html">
         <span class="raih-cat__thumb raih-cat__thumb--signature" aria-hidden="true">
-                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-plates-v3-320w.webp"
-                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-plates-v3-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/images/raih/category-plates-v3-480w.webp 480w"
+                      <img src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-plates-v3-320w.webp"
+                 srcset="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-plates-v3-320w.webp 320w, https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/images/raih/category-plates-v3-480w.webp 480w"
                  sizes="(max-width: 560px) 76px, (max-width: 1023px) 96px, 120px" alt="" width="120" height="120" loading="lazy" decoding="async">
                   </span>
         <span class="raih-cat__name">لوحات ورخص</span>
@@ -1236,11 +1239,11 @@ Salla.analytics.registerTracker(latestProduct);
     })();
   });
 </script>
-<salla-hook name="body:end"></salla-hook><script defer crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/app.js"></script>
+<salla-hook name="body:end"></salla-hook><script defer crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/app.js"></script>
 
 <salla-offer-modal data-testid="store-offer-modal"></salla-offer-modal>
 <salla-search data-testid="store-search-modal"></salla-search>
 <salla-login-modal data-testid="store-login-modal"></salla-login-modal>
-    <script defer src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/home.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/home.js"></script>
 </body>
 </html>

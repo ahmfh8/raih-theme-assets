@@ -80,8 +80,11 @@
   document.addEventListener('DOMContentLoaded', function () {
     if (!window.Salla || !Salla.onReady) { return; }
     Salla.onReady(function () {
-      salla.cart.quickAdd = function (id, quantity) { return demoAdd(id, quantity); };
-      salla.cart.addItem = function (data) {
+      /* salla.cart itself cannot be patched; its add calls go through salla.api.cart */
+      var api = salla.api && salla.api.cart;
+      if (!api) { return; }
+      api.quickAdd = function (id, quantity) { return demoAdd(id, quantity); };
+      api.addItem = function (data) {
         var id = typeof data === 'object' ? (pick(data, 'id') || pick(data, 'product_id')) : data;
         return demoAdd(id, pick(data, 'quantity'));
       };
@@ -100,8 +103,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <script defer data-cfasync="false" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/product-card.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/main-menu.js"></script>
+    <script defer data-cfasync="false" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/product-card.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/main-menu.js"></script>
     
     
 
@@ -173,7 +176,7 @@
 <meta name="twitter:url" content="https://salla.design/dev-ypwvvihy5rlvhifb/سكوترات/c338806973">
 <meta name="twitter:site" content="@SallaApp">
 <meta name="twitter:creator" content="@SallaApp">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"متجر تجريبي","description":"متجر تجريبي - Demo Store","url":"https://salla.design/dev-ypwvvihy5rlvhifb","logo":"https://salla-dev.s3.eu-central-1.amazonaws.com/logo/logo-fashion.jpg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"سكوترات | متجر تجريبي","description":"متجر تجريبي - Demo Store","url":"https://salla.design/dev-ypwvvihy5rlvhifb/سكوترات/c338806973"}</script>        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/app.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"متجر تجريبي","description":"متجر تجريبي - Demo Store","url":"https://salla.design/dev-ypwvvihy5rlvhifb","logo":"https://salla-dev.s3.eu-central-1.amazonaws.com/logo/logo-fashion.jpg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"سكوترات | متجر تجريبي","description":"متجر تجريبي - Demo Store","url":"https://salla.design/dev-ypwvvihy5rlvhifb/سكوترات/c338806973"}</script>        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/app.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap">
         <link rel="stylesheet" href="https://cdn.salla.network/fonts/sallaicons.css?v=2.0.5"/>
 
@@ -901,11 +904,11 @@ Salla.analytics.registerTracker(latestProduct);
     })();
   });
 </script>
-<salla-hook name="body:end"></salla-hook><script defer crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/app.js"></script>
+<salla-hook name="body:end"></salla-hook><script defer crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/app.js"></script>
 
 <salla-offer-modal data-testid="store-offer-modal"></salla-offer-modal>
 <salla-search data-testid="store-search-modal"></salla-search>
 <salla-login-modal data-testid="store-login-modal"></salla-login-modal>
-	<script defer src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0b659e9/product.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@ec96a54/product.js"></script>
 </body>
 </html>
