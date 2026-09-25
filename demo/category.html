@@ -50,6 +50,43 @@
     if (page) { location.href = page; } else { toast(); }
   }, true);
   window.raihDemoToast = toast;
+
+  /* Cart: Salla's cart API needs cookies, which browsers refuse to send across sites to a server that
+     answers "*" (reading products works live). The demo keeps a local cart instead: the product is
+     read live, then Salla's own "item added" event fires, so "تمت الإضافة" and the helmet reminder
+     behave as in the store. Nothing is sent to the store's cart. */
+  var demoCart = {items: [], count: 0, sub_total: 0, total: 0};
+  function demoAdd(id, quantity) {
+    var qty = Number(quantity) || 1;
+    return salla.product.fetch({source: 'selected', source_value: [String(id)], limit: 1}).then(function (response) {
+      var p = (response && response.data || [])[0];
+      if (!p) { throw new Error('product not found'); }
+      var price = Number(p.is_on_sale ? p.sale_price : p.price) || 0;
+      demoCart.items.push({product_id: p.id, product_name: p.name, product_image: p.image && p.image.url, price: price, quantity: qty});
+      demoCart.count += qty;
+      demoCart.sub_total += price * qty;
+      demoCart.total = demoCart.sub_total;
+      var result = {success: true, data: {product_id: p.id, cart: JSON.parse(JSON.stringify(demoCart))}};
+      try { salla.cart.event.itemAdded(result, p.id); } catch (e) {}
+      document.querySelectorAll('.raih-bottom-nav__count, .s-cart-summary-count').forEach(function (el) { el.textContent = demoCart.count; el.hidden = false; });
+      return result;
+    });
+  }
+  function pick(data, key) {
+    if (!data) { return null; }
+    if (typeof FormData !== 'undefined' && data instanceof FormData) { return data.get(key); }
+    return data[key];
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.Salla || !Salla.onReady) { return; }
+    Salla.onReady(function () {
+      salla.cart.quickAdd = function (id, quantity) { return demoAdd(id, quantity); };
+      salla.cart.addItem = function (data) {
+        var id = typeof data === 'object' ? (pick(data, 'id') || pick(data, 'product_id')) : data;
+        return demoAdd(id, pick(data, 'quantity'));
+      };
+    });
+  });
 })();
 </script>
     <meta charset="UTF-8">
