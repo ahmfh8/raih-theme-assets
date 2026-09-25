@@ -1096,6 +1096,25 @@
             ]
         },
         {
+            "type": "items",
+            "icon": "sicon-packed-box",
+            "label": "تصنيف الإكسسوارات",
+            "id": "raih_accessories_category",
+            "value": [],
+            "description": "منه يأتي «يكمّل مشوارك» في صفحة السكوتر وتذكير الخوذة بعد الإضافة. فارغ = أي تصنيف اسمه فيه «إكسسوارات». وسم «يناسب-XXX» على الإكسسوار يحصره على منتجات فيها XXX",
+            "required": false,
+            "format": "variable-list",
+            "searchable": true,
+            "source": "custom",
+            "sources": [
+                {
+                    "label": "تصنيف",
+                    "key": "categories",
+                    "value": "categories"
+                }
+            ]
+        },
+        {
             "id": "raih_footer_tagline",
             "label": "وصف رايح في الفوتر",
             "description": null,
@@ -2452,19 +2471,6 @@
                     ],
                     "source": "Manual",
                     "required": false
-                },
-                {
-                    "type": "string",
-                    "icon": "sicon-format-text-alt",
-                    "label": "أقل سعر لإظهار «قسّطها» مع تابي (ريال)",
-                    "id": "tabby_min",
-                    "value": "300",
-                    "format": "text",
-                    "required": false,
-                    "description": "يظهر سطر تابي تحت السعر للمنتجات بهذا السعر أو أكثر، إذا كان تابي مفعّلًا",
-                    "placeholder": "300",
-                    "minLength": 0,
-                    "maxLength": 6
                 },
                 {
                     "type": "string",
