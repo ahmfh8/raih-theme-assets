@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<!-- بسم الله الرحمن الرحيم -->
+<head>
+<meta name="robots" content="noindex, nofollow">
+<script>
+/* RAIH mobile demo (scripts/demo.mjs): check-only copy. Cart, checkout, login and pages outside
+   the 4 demo pages show a toast instead of leaving. */
+(function () {
+  var PAGES = {"index.html":"/dev-ypwvvihy5rlvhifb","category.html":"/dev-ypwvvihy5rlvhifb/%D8%B3%D9%83%D9%88%D8%AA%D8%B1%D8%A7%D8%AA/c338806973","product.html":"/dev-ypwvvihy5rlvhifb/%D8%B3%D9%83%D9%88%D8%AA%D8%B1-%D8%B1%D8%A7%D9%8A%D8%AD-%D8%A8%D8%B1%D9%88-%D9%84%D9%84%D9%83%D8%A8%D8%A7%D8%B1/p1380326115","search.html":"/dev-ypwvvihy5rlvhifb/search?q=%D8%B3%D9%83%D9%88%D8%AA%D8%B1"};
+  function toast() {
+    var el = document.getElementById('raih-demo-toast');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'raih-demo-toast';
+      el.setAttribute('role', 'status');
+      el.style.cssText = 'position:fixed;left:50%;top:18px;z-index:2147483647;transform:translateX(-50%);padding:12px 18px;border-radius:999px;background:#102034;color:#fff;font:700 15px/1.4 system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.25);direction:rtl;transition:opacity .2s';
+      document.body.appendChild(el);
+    }
+    el.textContent = 'نسخة عرض للفحص فقط';
+    el.style.opacity = '1';
+    clearTimeout(el.timer);
+    el.timer = setTimeout(function () { el.style.opacity = '0'; }, 1800);
+  }
+  function demoPage(href) {
+    try {
+      var url = new URL(href, location.href);
+      if (url.origin === location.origin && /\/demo\//.test(url.pathname)) { return url.href; }
+      var path = decodeURIComponent(url.pathname).replace(/\/+$/, '');
+      if (path === "/dev-ypwvvihy5rlvhifb") { return 'index.html' + url.search.replace(/[?&]preview=true/, ''); }
+      if (/\/c338806973$/.test(path)) { return 'category.html'; }
+      if (/\/p1380326115$/.test(path)) { return 'product.html'; }
+      if (/\/search$/.test(path)) { return 'search.html'; }
+    } catch (e) {}
+    return null;
+  }
+  var BLOCK = /\/(cart|checkout|payment|login|profile|orders|wishlist|notifications|wallet)(\/|$|\?)/;
+  document.addEventListener('click', function (event) {
+    var target = event.target.closest && event.target.closest('a[href], .raih-cart, salla-user-menu, [data-raih-cart-link], salla-login-modal');
+    if (!target) { return; }
+    if (target.tagName !== 'A') { event.preventDefault(); event.stopPropagation(); toast(); return; }
+    var href = target.getAttribute('href') || '';
+    if (!href || href.charAt(0) === '#' || /^(javascript:|tel:|mailto:|https:\/\/wa\.me)/.test(href)) { return; }
+    var url;
+    try { url = new URL(href, location.href); } catch (e) { return; }
+    if (url.origin === location.origin && url.pathname === location.pathname) { return; } /* ?finder=1, ?reel=N */
+    var page = !BLOCK.test(url.pathname) && demoPage(href);
+    event.preventDefault();
+    event.stopPropagation();
+    if (page) { location.href = page; } else { toast(); }
+  }, true);
+  window.raihDemoToast = toast;
+})();
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    
+                                                            
+                                                                                                                                                                                                                                                    
+            <script data-cfasync="false">try{var m=localStorage.getItem('raih-theme');if(!m&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)m='dark';if(m==='dark')document.documentElement.setAttribute('data-raih-theme','dark')}catch(e){}</script>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <script defer data-cfasync="false" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0be5c92/product-card.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0be5c92/main-menu.js"></script>
+    
+    
+
+    <script data-cfasync="false">
+        window.header_is_sticky = "1"
+        window.imageZoom = ""
+        window.can_access_wallet = false
+        window.enable_more_menu = "1"
+                window.enable_add_product_toast = "1"
+        window.notify_when_available_in_card = "1"
+                window.raihConfig = {"freeShippingMin":"199","cartUrl":"https:\/\/salla.design\/dev-ypwvvihy5rlvhifb\/cart","whatsapp":"966509038395","tamaraLogo":"https:\/\/cdn.jsdelivr.net\/gh\/ahmfh8\/raih-theme-assets@0be5c92\/images\/raih\/tamara-logo-badge-en.svg"};
+        window.raihReels = [{"video":"https:\/\/cdn.jsdelivr.net\/gh\/ahmfh8\/raih-theme-assets@63b5bc7\/test-media\/raih-reel-test.mp4","poster":"https:\/\/cdn.jsdelivr.net\/gh\/ahmfh8\/raih-theme-assets@63b5bc7\/test-media\/raih-reel-test.webp","title":"\u0633\u0643\u0648\u062a\u0631 \u0627\u0644\u0645\u062f\u064a\u0646\u0629 \u0623\u062b\u0646\u0627\u0621 \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645","note":"\u062d\u062c\u0645\u0647 \u0648\u0642\u064a\u0627\u062f\u062a\u0647 \u0639\u0644\u0649 \u0627\u0644\u0637\u0631\u064a\u0642","product":"1380326115"},{"video":"https:\/\/cdn.jsdelivr.net\/gh\/ahmfh8\/raih-theme-assets@63b5bc7\/test-media\/raih-reel-test.mp4","poster":"","title":"\u0627\u0644\u062c\u064a\u0628 \u0627\u0644\u0643\u0647\u0631\u0628\u0627\u0626\u064a \u0641\u064a \u0627\u0644\u062d\u0648\u0634","note":"\u0627\u0644\u062d\u062c\u0645 \u0648\u0627\u0644\u062a\u062d\u0643\u0645 \u0643\u0645\u0627 \u064a\u0628\u062f\u0648\u0627\u0646 \u0641\u0639\u0644\u064a\u064b\u0627","product":"995945171"},{"video":"https:\/\/cdn.jsdelivr.net\/gh\/ahmfh8\/raih-theme-assets@63b5bc7\/test-media\/raih-reel-test.mp4","poster":"","title":"\u062f\u0631\u0641\u062a \u0628\u062b\u0644\u0627\u062b \u0639\u062c\u0644\u0627\u062a","note":"\u0627\u0644\u062b\u0628\u0627\u062a \u0641\u064a \u0627\u0644\u0645\u0646\u0639\u0637\u0641\u0627\u062a","product":"1916262668"},{"video":"https:\/\/cdn.jsdelivr.net\/gh\/ahmfh8\/raih-theme-assets@63b5bc7\/test-media\/raih-reel-test.mp4","poster":"","title":"\u062e\u0648\u0630\u0629 \u0627\u0644\u0633\u0644\u0627\u0645\u0629","note":"\u0627\u0644\u0645\u0642\u0627\u0633 \u0648\u0627\u0644\u062a\u0647\u0648\u064a\u0629","product":"1562689190"},{"video":"https:\/\/cdn.jsdelivr.net\/gh\/ahmfh8\/raih-theme-assets@63b5bc7\/test-media\/raih-reel-test.mp4","poster":"","title":"\u0645\u0646\u062a\u062c \u0628\u062e\u064a\u0627\u0631\u0627\u062a","note":"\u064a\u0641\u062a\u062d \u0627\u0644\u0646\u0627\u0641\u0630\u0629 \u0627\u0644\u0633\u0631\u064a\u0639\u0629 \u0644\u0627\u062e\u062a\u064a\u0627\u0631 \u0627\u0644\u0645\u0642\u0627\u0633","product":"1374711639"}];
+    </script>
+    
+    <link rel="preconnect" href="https://cdn.assets.salla.network" />
+<link rel="preconnect" href="https://cdn.salla.network" />
+<!-- theme color -->
+<meta name="msapplication-navbutton-color" content="#aed8e0">
+<meta name="apple-mobile-web-app-status-bar-style" content="#aed8e0">
+
+<!-- fav icon -->
+<link rel="icon" type="image/png" href="https://salla-dev.s3.eu-central-1.amazonaws.com/logo/logo-fashion.jpg" />
+<link rel="apple-touch-icon-precomposed" href="https://salla-dev.s3.eu-central-1.amazonaws.com/logo/logo-fashion.jpg">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://salla-dev.s3.eu-central-1.amazonaws.com/logo/logo-fashion.jpg">
+
+
+
+<script data-cfasync="false">
+    
+    window.salla = window.Salla = window.Salla || {};
+    Salla.onReady = Salla.onReady || function (callback) {
+        return new Promise(function (resolve) {
+            return Salla.status == 'ready'
+                ? resolve(callback ? callback(salla.config.all()) : salla.config.all())
+                : window.addEventListener('twilight::initiated', function (config) { resolve(callback ? callback(config.detail) : config.detail) }, { once: true });
+        });
+    };
+</script>
+<style>
+    salla-hook {
+        all: unset;
+        display: none;
+    }
+</style>
+
+
+
+<script async src="https://cdn.salla.network/js/twilight/2.14.584/twilight.esm.js" type="module" crossorigin></script>
+
+    
+    <title>سكوتر رايح برو للكبار | متجر تجريبي</title>
+<meta name="description" content="يطوي بثواني ويدخل شنطة السيارةفرامل أمامية وخلفيةإضاءة أمامية للمشاوير الليلية">
+<meta property="store:published_time" content="2026-09-23T20:02:13+03:00">
+<link rel="canonical" href="product.html">
+<link rel="alternate" hreflang="ar" href="product.html">
+<meta property="og:description" content="يطوي بثواني ويدخل شنطة السيارةفرامل أمامية وخلفيةإضاءة أمامية للمشاوير الليلية">
+<meta property="og:title" content="سكوتر رايح برو للكبار | متجر تجريبي">
+<meta property="og:type" content="product">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:url" content="https://salla.design/dev-ypwvvihy5rlvhifb/سكوتر-رايح-برو-للكبار/p1380326115">
+<meta property="og:image" content="https://cdn.files.salla.network/products/1799288883/4c17f180-1a23-423c-ab20-68c7bbeab5a1-original.webp">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="300">
+<meta property="product:pretax_price:amount" content="1300">
+<meta property="product:pretax_price:currency" content="SAR">
+<meta property="product:price:amount" content="1499">
+<meta property="product:price:currency" content="SAR">
+<meta property="product:sale_price:amount" content="1300">
+<meta property="product:sale_price:currency" content="SAR">
+<meta property="product:brand" content="متجر تجريبي">
+<meta property="product:availability" content="in stock">
+<meta property="product:condition" content="new">
+<meta property="product:retailer_item_id" content="1380326115">
+<meta property="product:category" content="سكوترات">
+
+<meta name="twitter:description" content="يطوي بثواني ويدخل شنطة السيارةفرامل أمامية وخلفيةإضاءة أمامية للمشاوير الليلية">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="سكوتر رايح برو للكبار | متجر تجريبي">
+<meta name="twitter:url" content="https://salla.design/dev-ypwvvihy5rlvhifb/سكوتر-رايح-برو-للكبار/p1380326115">
+<meta name="twitter:site" content="@SallaApp">
+<meta name="twitter:creator" content="@SallaApp">
+<meta name="twitter:image" content="https://cdn.files.salla.network/products/1799288883/4c17f180-1a23-423c-ab20-68c7bbeab5a1-original.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"متجر تجريبي","description":"متجر تجريبي - Demo Store","url":"https://salla.design/dev-ypwvvihy5rlvhifb","logo":"https://salla-dev.s3.eu-central-1.amazonaws.com/logo/logo-fashion.jpg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"سكوتر رايح برو للكبار | متجر تجريبي","description":"يطوي بثواني ويدخل شنطة السيارةفرامل أمامية وخلفيةإضاءة أمامية للمشاوير الليلية","url":"https://salla.design/dev-ypwvvihy5rlvhifb/سكوتر-رايح-برو-للكبار/p1380326115"}</script>        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0be5c92/app.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap">
+        <link rel="stylesheet" href="https://cdn.salla.network/fonts/sallaicons.css?v=2.0.5"/>
+
+    <style>
+        body.theme-raed { font-family: "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif; }
+        :root {
+                        --font-main: "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+                        --color-primary: #ff6b24;
+            --color-primary-dark: #dc4d0c;
+            --color-primary-light: #ff9a62;
+            --color-primary-reverse: #ffffff;
+            --color-primary-d: #dc4d0c;
+            --color-primary-l: #ff9a62;
+            /* Theme specific variables */
+            --s-radius: .75rem;
+        }
+    </style>
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","name":"سكوتر رايح برو للكبار","description":"يطوي بثواني ويدخل شنطة السيارةفرامل أمامية وخلفيةإضاءة أمامية للمشاوير الليلية","sku":"سكوتر-رايح-برو-للكبار/p1380326115","offers":{"@type":"Offer","url":"https://salla.design/dev-ypwvvihy5rlvhifb/سكوتر-رايح-برو-للكبار/p1380326115","availability":"https://schema.org/InStock","price":1300,"priceCurrency":"SAR","priceValidUntil":"2026-10-25T07:29:12+03:00","seller":{"@type":"Organization","name":"متجر تجريبي"}},"image":"https://cdn.files.salla.network/products/1799288883/4c17f180-1a23-423c-ab20-68c7bbeab5a1-original.webp"}]}</script><script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({"event":"detail","ecommerce":{"currencyCode":"SAR","exchangeRate":"1","event_id":"5d35f3e0fa863463f6b4cd855dbf65d26e33120c","detail":{"products":[{"id":1380326115,"name":"سكوتر رايح برو للكبار","categories":[{"id":12248346,"name":"سكوترات"}],"category":"سكوترات","price":1300,"quantity":1,"variant":"","brand":"","image":"https:\/\/cdn.files.salla.network\/products\/1799288883\/4c17f180-1a23-423c-ab20-68c7bbeab5a1-original.webp"}]}},"page":{"fingerprint":"","pageName":"productShow","mobileApp":0,"referrer":"https:\/\/salla.design\/dev-ypwvvihy5rlvhifb","theme":"draft-2094908966"},"store":{"store":"dev-ypwvvihy5rlvhifb","facebook_pixel_id":null,"google_analytics_id":null,"snapchat_pixel_id":null},"customer":{"isGuest":true}});
+</script>
+    
+</head>
+<body id="app" class="theme-raed overflow-x-hidden product-single salla-draft-2094908966 color-mode-dark rtl font-pingarlt   footer-is-light
+  
+   is-sticky-product-bar
+  
+  
+  ">
+
+<salla-advertisement></salla-advertisement><salla-hook name="body:start"></salla-hook>    <span class="s-design-before s-design-before--header s-design-invisible-dom hidden" id="edit-header"></span>        
+<div class="lg:hidden">
+  <salla-bullet-delivery-tag></salla-bullet-delivery-tag>
+</div>
+
+  <div class="raih-topstrip" data-testid="raih-topstrip">
+    <div class="raih-shell raih-topstrip__inner">
+                      <span>ضمان 6 أشهر على عيوب التصنيع</span>
+              <i aria-hidden="true"></i>        <span>شحن مجاني فوق 199 <i class=sicon-sar></i></span>
+          </div>
+  </div>
+
+<header data-testid="store-header" class="store-header raih-header is-sticky">
+  <div class="raih-shell raih-header__main">
+    <a data-testid="store-header-logo" class="raih-brand" href="index.html" aria-label="متجر تجريبي">
+              <span class="raih-brand__ar" aria-hidden="true">رايح</span>
+        <span class="raih-brand__en" aria-hidden="true">RAIH</span>
+        <b aria-hidden="true"></b>
+                    <h2 class="sr-only">متجر تجريبي</h2>
+          </a>
+
+    <div class="raih-header__search header-search">
+      <salla-search data-testid="store-header-search" inline oval height="44"></salla-search>
+    </div>
+
+    <div class="raih-header__actions">
+              <div class="header-buttons raih-header__locale">
+          <salla-localization-modal data-testid="store-header-localization" show-trigger></salla-localization-modal>
+        </div>
+      
+      
+      <div class="hidden lg:block">
+        <salla-bullet-delivery-tag></salla-bullet-delivery-tag>
+      </div>
+
+              <button type="button" class="raih-action raih-theme-toggle" data-raih-theme-toggle aria-label="تفعيل الوضع الداكن">
+          <svg class="raih-icon raih-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.4A8 8 0 0 1 8.6 4 8.1 8.1 0 1 0 20 15.4Z"/></svg>
+          <svg class="raih-icon raih-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <span class="raih-theme-toggle__label raih-theme-toggle__label--dark">داكن</span>
+          <span class="raih-theme-toggle__label raih-theme-toggle__label--light">فاتح</span>
+        </button>
+      
+      <salla-user-menu data-testid="store-header-user-menu" class="raih-account" avatar-only show-header show-trigger></salla-user-menu>
+
+      <salla-cart-summary data-testid="store-header-cart" class="raih-cart">
+        <svg slot="icon" class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5h2l1.7 9.2h9.9l2-6.4H7"/><circle cx="9" cy="18.5" r="1.2"/><circle cx="17" cy="18.5" r="1.2"/></svg>
+      </salla-cart-summary>
+
+      <a data-testid="store-header-mobile-toggle" class="raih-action raih-menu-toggle" href="#mobile-menu" aria-label="Open-menu">
+        <svg class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </a>
+    </div>
+  </div>
+
+    <nav class="raih-catnav" aria-label="أقسام المتجر">
+    <div class="container raih-shell">
+      <div class="flex">
+        <custom-main-menu></custom-main-menu>
+      </div>
+    </div>
+  </nav>
+</header>
+<span id="after-header" class="s-design-invisible-dom s-design-after--header s-design-after hidden">
+                    <ul>
+                        <li><a href="#" class="link--edit"><span> تعديل </span><i class="sicon-edit"></i></a></li>
+                    </ul>
+                </span>    <main id="main-content" role="main" class="flex flex-col space-y-8 sm:space-y-16">
+    <salla-hook name="product.single:start"></salla-hook>          <div class="container container--breadcrumbs">
+                    <nav class="breadcrumbs w-full py-5">
+              <salla-breadcrumb></salla-breadcrumb>
+          </nav>
+      </div>
+    
+        <div class="s-blocks-wrapper s-before-product-info !mt-0"></div>
+
+    <div class="container container--product-details">
+        <div class="raih-product flex flex-col items-start md:flex-row" id="product-1380326115">
+            <div class="sidebar raih-pgallery w-full md:!w-2/4 shrink-0">
+                                <salla-slider
+                        data-testid="store-product-image-slider"
+                        id="details-slider-1380326115"
+                        class="details-slider rounded-md image-slider"
+                        data-images='[{&quot;id&quot;:297570161,&quot;url&quot;:&quot;https:\/\/cdn.files.salla.network\/products\/1799288883\/4c17f180-1a23-423c-ab20-68c7bbeab5a1-original.webp&quot;,&quot;main&quot;:true,&quot;three_d_image_url&quot;:&quot;&quot;,&quot;alt&quot;:&quot;\u0633\u0643\u0648\u062a\u0631 \u0631\u0627\u064a\u062d \u0628\u0631\u0648 \u0644\u0644\u0643\u0628\u0627\u0631&quot;,&quot;video_url&quot;:null,&quot;video_type&quot;:null,&quot;type&quot;:&quot;image&quot;,&quot;sort&quot;:1}]'
+                        type="thumbs"
+                        loop="false"
+                        auto-height
+                        listen-to-thumbnails-option
+                        show-thumbs-controls="false">
+                                                                <span class="raih-pgallery__badge is-best">الأكثر مبيعًا</span>
+                    
+                    <salla-button
+                            class="btn--wishlist animated sws"
+                            data-id="1380326115"
+                            onclick="salla.wishlist.toggle('1380326115')"
+                            shape="icon"
+                            fill="outline"
+                            color="light">
+                        <i class="sicon-heart"></i>
+                    </salla-button>
+
+                                        
+                    <div slot="items">
+                                                                                    <a data-fslightbox="product_1380326115"
+                                   data-img-id="297570161"
+                                   data-slid-index="0"                                   data-caption="سكوتر رايح برو للكبار"
+                                   data-infinite="false"
+                                   data-type="image"
+                                   href="https://cdn.files.salla.network/products/1799288883/4c17f180-1a23-423c-ab20-68c7bbeab5a1-original.webp"
+                                   aria-label="سكوتر رايح برو للكبار"
+                                   class="swiper-slide magnify-wrapper homeslider__slide ">
+                                                                            <img id="297570161" fetchpriority="high" loading="eager" src="https://cdn.files.salla.network/products/1799288883/4c17f180-1a23-423c-ab20-68c7bbeab5a1-original.webp"
+                                             alt="سكوتر رايح برو للكبار"
+                                             class="h-full object-contain w-full ">
+                                                                    </a>
+                                                                        </div>
+
+                                    </salla-slider>
+
+                                                                                                                                                                                                                                                                                                                                                    <button type="button" class="raih-video-btn" data-raih-video="1380326115">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5L8 5.5Z"/></svg>
+                        <span>شوف المنتج على الطبيعة</span>
+                    </button>
+                            </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            <div class="main-content raih-pinfo w-full md:w-2/4">
+                <salla-hook name="product:single.description.start"></salla-hook>
+                
+                <h1 data-testid="store-product-title" class="raih-pinfo__title">سكوتر رايح برو للكبار</h1>
+
+                
+                                <div data-testid="store-product-price" class="raih-pinfo__price price-wrapper">
+                    <div class="price_is_on_sale ">
+                        <b class="total-price">1,300 <i class=sicon-sar></i></b>
+                        <s class="before-price">1,499 <i class=sicon-sar></i></s>
+                                                <span class="raih-pinfo__discount" data-raih-discount data-regular="1499" data-sale="1300" hidden></span>
+                    </div>
+                    <div class="starting-or-normal-price hidden">
+                                                <b class="total-price">1,300 <i class=sicon-sar></i></b>
+                    </div>
+                </div>
+                <div data-testid="store-product-out-of-stock" class="out-of-stock hidden raih-pinfo__out">نفدت الكمية</div>
+                
+                                <div data-raih-ship-line data-price="1300"></div>
+
+                                <div class="raih-pinfo__pay" data-raih-pay-line data-price="1300"></div>
+                <salla-installment data-testid="store-product-installment" price="1300"></salla-installment>
+
+                                                                                                                                                                                                        <ul class="raih-pinfo__rows">
+                                                    <li><svg class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg><span>يمشي لين <b>45 كم</b> بالشحنة</span></li>
+                                                    <li><svg class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 17.5a8.5 8.5 0 1 1 15.6 0"/><path d="m12 14 4-5"/></svg><span>السرعة <b>40 كم/س</b></span></li>
+                                                    <li><svg class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h10l2.5 12h-15L7 8Z"/><path d="M9.5 8a2.5 2.5 0 0 1 5 0"/></svg><span>يتحمّل لين <b>120 كجم</b></span></li>
+                                                    <li><svg class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6.5" r="3"/><path d="M6 21v-3.5a6 6 0 0 1 12 0V21"/></svg><span>مناسب من عمر <b>14 سنة</b></span></li>
+                                                    <li><svg class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5h6.5L10 22l8.5-11.5H12L13 2Z"/></svg><span>قوة الماطور <b>800 واط</b></span></li>
+                                            </ul>
+                
+                                <ul class="raih-pinfo__features" data-raih-features hidden></ul>
+
+                                                <salla-hook name="product:single.description"></salla-hook>
+                
+                
+                
+                <form data-testid="store-product-form" class="form product-form raih-pinfo__form" enctype="multipart/form-data" method="post"
+                      onsubmit="return salla.form.onSubmit('cart.addItem', event)">
+                    <input type="hidden" name="id" value="1380326115">
+
+                    <salla-hook name="product:single.form.start"></salla-hook>                    
+
+
+
+                    <salla-hook name="product:single.form.end"></salla-hook>
+                    
+                    <div class="raih-pinfo__buy" data-raih-buy>
+                                                    <div class="raih-pinfo__qty">
+                                <span>الكمية</span>
+                                <salla-quantity-input data-testid="store-product-quantity" max="5" value="1" name="quantity" aria-label="Quantity"></salla-quantity-input>
+                            </div>
+                                                <salla-add-product-button
+                                data-testid="store-product-add-to-cart"
+                                quick-buy
+                                required-shipping
+                                
+                                amount="1300"
+                                class="raih-pinfo__add"
+                                product-status="sale"
+                                product-type="product"
+                                product-id="1380326115"
+                                loader-position="end"
+                                type="submit"
+                                width="wide"
+                                >
+                            أضف إلى السلة
+                        </salla-add-product-button>
+                    </div>
+
+                                    </form>
+
+                                                    <a class="raih-pinfo__wa" target="_blank" rel="noopener"
+                       href="https://wa.me/966509038395?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%B3%D8%A4%D8%A7%D9%84%20%D8%B9%D9%86%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%3A%20%D8%B3%D9%83%D9%88%D8%AA%D8%B1%20%D8%B1%D8%A7%D9%8A%D8%AD%20%D8%A8%D8%B1%D9%88%20%D9%84%D9%84%D9%83%D8%A8%D8%A7%D8%B1%0Ahttps%3A%2F%2Fsalla.design%2Fdev-ypwvvihy5rlvhifb%2F%D8%B3%D9%83%D9%88%D8%AA%D8%B1-%D8%B1%D8%A7%D9%8A%D8%AD-%D8%A8%D8%B1%D9%88-%D9%84%D9%84%D9%83%D8%A8%D8%A7%D8%B1%2Fp1380326115">
+                        <svg class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8.5 8.5 0 1 1 8 18.8L4 20Z"/></svg>
+                        اسأل عن هذا المنتج
+                    </a>
+                
+                <ul class="raih-pinfo__trust" aria-label="مزايا المتجر">
+                    <li><svg class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.4 8.2-8 10-4.6-1.8-8-5-8-10V6Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>ضمان 6 أشهر</li>
+                    <li><svg class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4.5 4.5 0 0 0-6 5.9L3.8 17a2 2 0 1 0 2.8 2.8l4.7-4.7a4.5 4.5 0 0 0 5.8-6l-2.8 2.8-2.3-2.3Z"/></svg>قطع أصلية</li>
+                    <li><svg class="raih-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h14a2 2 0 0 1 2 2v10H5a2 2 0 0 1-2-2v-11a2 2 0 0 1 2-2h12"/><path d="M15 11h6v4h-6a2 2 0 0 1 0-4Z"/></svg>دفع آمن</li>
+                </ul>
+
+                <div class="raih-pinfo__share">
+                    <salla-social-share data-testid="store-product-social-share" aria-label="social share"></salla-social-share>
+                    <salla-button data-testid="store-product-wishlist-btn" class="btn--wishlist animated" data-id="1380326115"
+                                  onclick="salla.wishlist.toggle('1380326115')" shape="icon" fill="outline" color="light" aria-label="add to wishlist">
+                        <i class="sicon-heart"></i>
+                    </salla-button>
+                </div>
+
+                <section component-id="" class="s-block s-block--bundle-out-of-stock-alternative"><salla-custom-component component-name="out-of-stock-alternative" bundle-id="642379674" config="{&quot;block-categories-global-info&quot;:&quot;&lt;div style=&#039;background:#eff8ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 14px;color:#1d4ed8;font-size:13px;display:flex;gap:8px;align-items:center;margin-bottom:20px&#039;&gt;&lt;i class=\&quot;hgi-stroke hgi-information-circle\&quot; style=\&quot;flex-shrink:0\&quot;&gt;&lt;\/i&gt;&lt;span&gt;\u064a\u0639\u0631\u0636 \u0644\u0644\u0639\u0645\u064a\u0644 \u0645\u0646\u062a\u062c\u0627\u062a \u0628\u062f\u064a\u0644\u0647 \u062d\u0627\u0644 \u0646\u0641\u0627\u0630 \u0643\u0645\u064a\u0647 \u0627\u0644\u0645\u0646\u062a\u062c.&lt;\/span&gt;&lt;\/div&gt;&quot;,&quot;ar&quot;:{&quot;title&quot;:&quot;\u0648\u0641\u064e\u0651\u0631\u0646\u0627 \u0644\u0643 \u0627\u0644\u0628\u062f\u064a\u0644&quot;},&quot;en&quot;:{&quot;title&quot;:&quot;We Found an Alternative for You&quot;},&quot;render_in&quot;:&quot;all&quot;,&quot;title&quot;:&quot;\u0648\u0641\u064e\u0651\u0631\u0646\u0627 \u0644\u0643 \u0627\u0644\u0628\u062f\u064a\u0644&quot;}"></salla-custom-component></section><salla-hook name="product:single.description.end"></salla-hook>                <salla-quick-order data-testid="store-product-quick-order" class="mt-5 block"></salla-quick-order>
+            </div>
+        </div>
+
+                            <section class="raih-pdesc" data-testid="store-product-description">
+                <h2>تفاصيل المنتج</h2>
+                <article class="article--main"><p>يطوي بثواني ويدخل شنطة السيارة</p><p>فرامل أمامية وخلفية</p><p>إضاءة أمامية للمشاوير الليلية</p></article>
+                            </section>
+        
+                <div class="raih-pbar" data-raih-pbar hidden>
+            <span class="raih-pbar__price">1,300 <i class=sicon-sar></i></span>
+            <button type="button" class="raih-pbar__add" data-raih-pbar-add>أضف إلى السلة</button>
+        </div>
+        <salla-offer data-testid="store-product-offer"></salla-offer>
+    </div>
+
+        <div class="s-blocks-wrapper s-before-reviews"></div>
+
+        
+        <div class="s-blocks-wrapper s-before-related"><section component-id="" class="s-block s-block--bundle-similar-products"><salla-custom-component component-name="similar-products" bundle-id="642379674" config="{&quot;block-categories-global-info&quot;:&quot;&lt;div style=&#039;background:#eff8ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 14px;color:#1d4ed8;font-size:13px;display:flex;gap:8px;align-items:center;margin-bottom:20px&#039;&gt;&lt;i class=\&quot;hgi-stroke hgi-information-circle\&quot; style=\&quot;flex-shrink:0\&quot;&gt;&lt;\/i&gt;&lt;span&gt;\u064a\u0642\u062a\u0631\u062d \u0645\u0634\u0645\u0631 \u062a\u0644\u0642\u0627\u0626\u064a\u064b\u0627 \u0645\u0646\u062a\u062c\u0627\u062a \u0645\u0634\u0627\u0628\u0647\u0629 \u0644\u0644\u0645\u0646\u062a\u062c \u0627\u0644\u0630\u064a \u064a\u062a\u0635\u0641\u062d\u0647 \u0627\u0644\u0639\u0645\u064a\u0644.&lt;\/span&gt;&lt;\/div&gt;&quot;,&quot;ar&quot;:{&quot;title&quot;:&quot;\u0645\u0646\u062a\u062c\u0627\u062a \u0645\u0634\u0627\u0628\u0647\u0629&quot;},&quot;en&quot;:{&quot;title&quot;:&quot;Similar Products&quot;},&quot;limit&quot;:&quot;4&quot;,&quot;render_in&quot;:&quot;all&quot;,&quot;title&quot;:&quot;\u0645\u0646\u062a\u062c\u0627\u062a \u0645\u0634\u0627\u0628\u0647\u0629&quot;}"></salla-custom-component></section><section component-id="" class="s-block s-block--bundle-customers-also-bought"><salla-custom-component component-name="customers-also-bought" bundle-id="642379674" config="{&quot;block-categories-global-info&quot;:&quot;&lt;div style=&#039;background:#eff8ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 14px;color:#1d4ed8;font-size:13px;display:flex;gap:8px;align-items:center;margin-bottom:20px&#039;&gt;&lt;i class=\&quot;hgi-stroke hgi-information-circle\&quot; style=\&quot;flex-shrink:0\&quot;&gt;&lt;\/i&gt;&lt;span&gt;\u062a\u0642\u062a\u0631\u062d \u0645\u0646\u062a\u062c\u0627\u062a \u064a\u0641\u0636\u0644 \u0627\u0644\u0639\u0645\u0644\u0627\u0621 \u0634\u0631\u0627\u0624\u0647\u0627 \u0645\u0639 \u0627\u0644\u0645\u0646\u062a\u062c \u0627\u0644\u0645\u0639\u0631\u0648\u0636.&lt;\/span&gt;&lt;\/div&gt;&quot;,&quot;ar&quot;:{&quot;title&quot;:&quot;\u0627\u0644\u0639\u0645\u0644\u0627\u0621 \u0627\u0634\u062a\u0631\u0648\u0627 \u0623\u064a\u0636\u064b\u0627&quot;},&quot;en&quot;:{&quot;title&quot;:&quot;Customers Also Bought&quot;},&quot;limit&quot;:&quot;4&quot;,&quot;render_in&quot;:&quot;all&quot;,&quot;title&quot;:&quot;\u0627\u0644\u0639\u0645\u0644\u0627\u0621 \u0627\u0634\u062a\u0631\u0648\u0627 \u0623\u064a\u0636\u064b\u0627&quot;}"></salla-custom-component></section><section component-id="" class="s-block s-block--bundle-customers-also-viewed"><salla-custom-component component-name="customers-also-viewed" bundle-id="642379674" config="{&quot;block-categories-global-info&quot;:&quot;&lt;div style=&#039;background:#eff8ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 14px;color:#1d4ed8;font-size:13px;display:flex;gap:8px;align-items:center;margin-bottom:20px&#039;&gt;&lt;i class=\&quot;hgi-stroke hgi-information-circle\&quot; style=\&quot;flex-shrink:0\&quot;&gt;&lt;\/i&gt;&lt;span&gt;\u064a\u0642\u062a\u0631\u062d \u0645\u0634\u0645\u0631 \u0645\u0646\u062a\u062c\u0627\u062a \u0634\u0627\u0647\u062f\u0647\u0627 \u0639\u0645\u0644\u0627\u0621 \u062a\u0635\u0641\u062d\u0648\u0627 \u0627\u0644\u0645\u0646\u062a\u062c \u0646\u0641\u0633\u0647.&lt;\/span&gt;&lt;\/div&gt;&quot;,&quot;ar&quot;:{&quot;title&quot;:&quot;\u0627\u0644\u0639\u0645\u0644\u0627\u0621 \u0634\u0627\u0647\u062f\u0648 \u0623\u064a\u0636\u0627&quot;},&quot;en&quot;:{&quot;title&quot;:&quot;Customers Also Viewed&quot;},&quot;limit&quot;:&quot;4&quot;,&quot;render_in&quot;:&quot;all&quot;,&quot;title&quot;:&quot;\u0627\u0644\u0639\u0645\u0644\u0627\u0621 \u0634\u0627\u0647\u062f\u0648 \u0623\u064a\u0636\u0627&quot;}"></salla-custom-component></section></div>
+
+                <section class="container raih-complete" data-raih-complete data-product-id="1380326115"
+             data-model-tag="" hidden>
+        <h2>يكمّل مشوارك</h2>
+        <div class="raih-complete__grid" data-raih-complete-grid></div>
+    </section>
+
+        <div class="s-blocks-wrapper s-after-related"></div>
+<salla-hook name="product.single:end"></salla-hook>    </main>
+    <span class="s-design-before s-design-before--footer s-design-invisible-dom hidden" id="edit-footer"></span><footer data-testid="store-footer" class="store-footer raih-footer">
+	<div aria-label="footer" class="raih-shell raih-footer__main">
+		<div class="raih-footer__brand">
+			<a href="index.html" class="raih-brand" aria-label="متجر تجريبي">
+									<span class="raih-brand__ar" aria-hidden="true">رايح</span>
+					<span class="raih-brand__en" aria-hidden="true">RAIH</span>
+					<b aria-hidden="true"></b>
+							</a>
+
+							<p class="raih-footer__tagline">كل مشوار له رايح. نقرّب لك الاختيار، ونبقى معك بعد وصول الطلب.</p>
+			
+			<salla-social data-testid="store-footer-social" class="raih-footer__social"></salla-social>
+
+			<div class="raih-footer__badges">
+								<salla-trust-badges data-testid="store-footer-trust-badges" dark></salla-trust-badges>
+											</div>
+		</div>
+
+		<div class="raih-footer__col">
+			<h3 class="raih-footer__title">روابط مهمة</h3>
+			<salla-menu data-testid="store-footer-menu" source="footer" with-cookie-preferences></salla-menu>
+		</div>
+
+		<div class="raih-footer__col">
+			<salla-contacts data-testid="store-footer-contacts"></salla-contacts>
+		</div>
+
+		<div class="raih-footer__col raih-footer__pay">
+			<h3 class="raih-footer__title">طرق الدفع</h3>
+			<salla-payments data-testid="store-footer-payments"></salla-payments>
+			<small>تظهر خطة الدفع كاملة قبل تأكيد الطلب.</small>
+			<salla-apps-icons data-testid="store-footer-apps"></salla-apps-icons>
+		</div>
+	</div>
+
+	<div class="raih-shell raih-footer__bottom">
+		<span class="copyright-text"><p class="text-gray-400 mb-2.5 md:mb-0">صنع بإتقان على | 2026
+    <a href="https://salla.com/?utm_source=store&amp;utm_medium=footer&amp;utm_campaign=dev-ypwvvihy5rlvhifb" class="hover:text-primary" target="_blank" rel="noreferrer" class="underline">منصة سلة</a>
+</p>
+</span>
+		<span>ضمان 6 أشهر • شحن داخل المملكة</span>
+	</div>
+
+		<span class="hidden bottom-2 rtl:pl-24 ltr:pr-24 md:grid-cols-3 opacity-40"></span>
+</footer>
+<span id="after-footer" class="s-design-invisible-dom s-design-after--footer s-design-after hidden">
+                    <ul>
+                        <li><a href="#" class="link--edit"><span> تعديل </span><i class="sicon-edit"></i></a></li>
+                    </ul>
+               </span></div>
+
+    <a class="raih-whatsapp is-desktop-only" href="https://wa.me/966509038395" target="_blank" rel="noopener" aria-label="واتساب الدعم">
+        <span>دعم رايح</span><b aria-hidden="true"><svg viewBox="0 0 24 24"><path class="raih-whatsapp__bubble" d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.3 20.7l4.4-1.1A8.8 8.8 0 1 0 12 3.2Z"/><path class="raih-whatsapp__phone" d="M9 8.2c.3-.6.6-.6.9-.6h.6c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .5-.1.7l-.6.7c.6 1.2 1.5 2.1 2.7 2.7l.7-.6c.2-.2.5-.2.7-.1l1.8.8c.3.1.4.3.4.5v.6c0 .3 0 .6-.6.9-.6.4-1.6.6-3-.1a9.6 9.6 0 0 1-4.3-4.3c-.7-1.4-.5-2.4-.1-3Z"/></svg></b>
+    </a>
+
+<script>window.baseUrl='https://salla.design/dev-ypwvvihy5rlvhifb/'; window.is_rtl=true; window.locale='ar';</script><script type="module" id="fast-checkout-js" src="https://cdn.assets.salla.network/prod/@salla.sa/fast-checkout-widget/v0.0.47/widget.esm.js"></script>
+
+
+<script type="importmap">
+    {
+        "imports": {
+            "lit": "https://cdn.assets.salla.network/static/lit/3.3.3/lit.js",
+            "lit/": "https://cdn.assets.salla.network/static/lit/3.3.3/",
+            "lit-html": "https://cdn.assets.salla.network/static/lit/3.3.3/lit-html/lit-html.js",
+            "lit-html/": "https://cdn.assets.salla.network/static/lit/3.3.3/lit-html/",
+            "lit-element": "https://cdn.assets.salla.network/static/lit/3.3.3/lit-element/lit-element.js",
+            "lit-element/": "https://cdn.assets.salla.network/static/lit/3.3.3/lit-element/",
+            "@lit/reactive-element": "https://cdn.assets.salla.network/static/lit/3.3.3/reactive-element/reactive-element.js",
+            "@lit/reactive-element/": "https://cdn.assets.salla.network/static/lit/3.3.3/reactive-element/"
+        }
+    }
+</script>
+<script>
+    function injectTwilightBundlesAssets() {
+        window.twilightBundlesObserver.disconnect();
+        if (document.querySelector('#twilight-bundles-assets')) {
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = "https://cdn.assets.salla.network/prod/@salla.sa/twilight-bundles/latest/twilight-bundles.js";
+        script.defer = true;
+        script.id = 'twilight-bundles-assets';
+        document.head.appendChild(script);
+    }
+    window.twilightBundlesObserver = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+            for (const node of mutation.addedNodes) {
+                if (node.nodeType === 1 && node.tagName.toLowerCase() === 'salla-custom-component') {
+                    injectTwilightBundlesAssets();
+                    return;
+                }
+            }
+        }
+    });
+
+    window.twilightBundlesObserver.observe(document.body, { childList: true, subtree: true });
+
+    Salla.onReady(() => document.querySelector('salla-custom-component') && injectTwilightBundlesAssets());
+</script>
+<script>
+    (function() {
+        // Safe threshold: 14KB (browser limit ~16KB, leave buffer)
+        var COOKIE_SIZE_THRESHOLD = 14000;
+
+        // Essential cookies preserved by NAME only
+        var essentialCookies = {
+            // Session & Security
+            exact: [
+                "__said",
+                "__said",
+                "__ssid",
+                "XSRF-TOKEN"
+            ],
+            // Marketing & Analytics (SEO-critical)
+            marketing: [
+                "_fbp", "_fbc",                                   // Meta/Facebook
+                "_ga", "_gid",                                    // Google Analytics
+                "_ttp",                                           // TikTok
+                "_scid", "_scid_r",                               // Snapchat
+                "twclid", "_twitter_sess", "personalization_id",  // Twitter/X
+                "_hjid", "_hjSessionUser"                         // Hotjar
+            ],
+            // Prefix patterns
+            prefixes: [
+                "_ga_",      // GA4 property-specific
+                "_gcl_",     // Google Ads click IDs
+                "_gac_",     // Google Ads conversion
+                "cf_",       // Cloudflare
+                "_hj",       // Hotjar
+                "intercom-"  // Intercom
+            ]
+        };
+
+        function shouldPreserve(name) {
+            name = name.trim();
+            if (essentialCookies.exact.indexOf(name) !== -1) return true;
+            if (essentialCookies.marketing.indexOf(name) !== -1) return true;
+            for (var i = 0; i < essentialCookies.prefixes.length; i++) {
+                if (name.indexOf(essentialCookies.prefixes[i]) === 0) return true;
+            }
+            return false;
+        }
+
+        function deleteCookie(name) {
+            var hostname = window.location.hostname;
+
+            if (/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(hostname)) {
+                document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+                return;
+            }
+            
+            var domains = [
+                '',                    // Browser default
+                hostname,              // Current domain
+                '.' + hostname         // With dot prefix
+            ];
+
+            var parts = hostname.split('.');
+            for (var i = 1; i < parts.length - 1; i++) {
+                domains.push('.' + parts.slice(i).join('.'));
+            }
+
+            var paths = ['/', ''];
+            var expiry = '=; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+
+            for (var i = 0; i < domains.length; i++) {
+                for (var j = 0; j < paths.length; j++) {
+                    var str = name + expiry;
+                    if (paths[j]) str += '; path=' + paths[j];
+                    if (domains[i]) str += '; domain=' + domains[i];
+                    document.cookie = str;
+                }
+            }
+        }
+
+        // Get cookie size with fallback for older browsers (IE11, Safari < 10.1)
+        function getCookieSize() {
+            var cookie = document.cookie;
+            if (typeof TextEncoder !== 'undefined') {
+                return new TextEncoder().encode(cookie).length;
+            }
+
+            // Fallback: count UTF-8 bytes manually (handles surrogate pairs)
+            var bytes = 0;
+            for (var i = 0; i < cookie.length; i++) {
+                var c = cookie.charCodeAt(i);
+                if (c < 128) {
+                    bytes += 1;
+                } else if (c < 2048) {
+                    bytes += 2;
+                } else if (c >= 0xD800 && c <= 0xDBFF) {
+                    var next = i + 1 < cookie.length ? cookie.charCodeAt(i + 1) : 0;
+                    if (next >= 0xDC00 && next <= 0xDFFF) {
+                        bytes += 4;
+                        i++; 
+                    } else {
+                        bytes += 3;
+                    }
+                } else if (c >= 0xDC00 && c <= 0xDFFF) {
+                    bytes += 3;
+                } else {
+                    bytes += 3;
+                }
+            }
+            return bytes;
+        }
+
+        function parseCookies(cookieStr) {
+            if (!cookieStr) return [];
+            var cookies = [];
+            var pairs = cookieStr.split('; ');
+            for (var i = 0; i < pairs.length; i++) {
+                var idx = pairs[i].indexOf('=');
+                var name;
+                if (idx === -1) {
+                    name = pairs[i].trim();
+                } else {
+                    name = pairs[i].substring(0, idx).trim();
+                }
+                if (name) {
+                    cookies.push({ name: name });
+                }
+            }
+            return cookies;
+        }
+
+        function cleanCookies() {
+            try {
+                if (getCookieSize() < COOKIE_SIZE_THRESHOLD) return;
+
+                var cookies = parseCookies(document.cookie);
+                for (var i = 0; i < cookies.length; i++) {
+                    if (!shouldPreserve(cookies[i].name)) {
+                        deleteCookie(cookies[i].name);
+                    }
+                }
+            } catch (e) {
+                // Silent fail - don't break page for cookie cleanup errors
+            }
+        }
+
+        // Initial cleanup on load && Periodic cleanup for SPAs and long sessions
+        cleanCookies();
+        setInterval(cleanCookies, 10000);
+    })();
+</script>
+    
+    <script>
+      function dispatchSallaEvents() {
+        salla.event.dispatchEvents({"twilight::init":{"store":{"id":1799288883,"ray":50,"logo":"https:\/\/salla-dev.s3.eu-central-1.amazonaws.com\/logo\/logo-fashion.jpg","icon":"https:\/\/salla-dev.s3.eu-central-1.amazonaws.com\/logo\/logo-fashion.jpg","name":"\u0645\u062a\u062c\u0631 \u062a\u062c\u0631\u064a\u0628\u064a","username":"dev-ypwvvihy5rlvhifb","store_country":"SA","country":"SA","url":"https:\/\/salla.design\/dev-ypwvvihy5rlvhifb\/","settings":{"auth":{"email_allowed":true,"mobile_allowed":true,"is_email_required":false,"countries":["sa"],"force_login":false,"whatsapp_allowed":false,"whatsapp_countries":[],"whatsapp_merchant_allowed":false,"user_country":"SA","config":null},"cart":{"apply_coupon_enabled":false,"basket_gap":true,"multi_coupon":false},"product":{"total_sold_enabled":1,"manual_quantity":true,"fit_type":null,"related_products_enabled":true,"product-recommendation-type":"brand","filters":null,"show_comments":false,"user_can_comment":true,"show_price_as_dash":false,"notify_options_availability":true,"show_special_offers":false,"show_more":false,"availability_notify":null,"bought_together":true},"category":{"testimonial_enabled":true},"payments":["bank","cod"],"arabic_numbers_enabled":false,"content_copyright":false,"use_sar_symbol":true,"is_multilingual":false,"currencies_enabled":true,"rating_enabled":true,"rating":{"is_enabled":true,"show_on_category":false,"show_on_product":false,"can_rate_store":false,"can_rate_product":false,"can_rate_shipping":false,"show_rating_summary":false,"show_recommendation":false,"allow_likes":false,"allow_attach_images":true,"required_attach_images":false,"allow_attach_videos":false,"required_attach_videos":false,"allow_contact_support":false,"allow_update":false,"update_period":7,"can_customer_hide_name":false,"visitor_can_comment":false,"page_feedback_enabled":true,"allow_reviews_from_product_page":false,"rating_store_points":null,"rating_product_points":null,"rating_shipping_company_points":null,"rating_product_with_image_points":null},"blog":{"is_enabled":true,"allow_likes_and_comments":false},"is_loyalty_enabled":false,"keys":{"maps":"","gtm":[]},"is_salla_gateway":true,"upload_size":2000,"tax":{"number":null,"certificate":null,"taxable_prices_enabled":false},"certificate":null,"made_in_ksa":false,"commercial_number":null,"freelance_number":null,"buy_now":{"label":"Salla","countryCode":"SA","supportedCountries":["SA","BH","KW","OM","QA","AE","JO"],"supportedNetworks":["masterCard","visa"],"validateUri":"\/dev-ypwvvihy5rlvhifb\/checkout\/applepay\/validate","myfatoorahS2s":false,"currency":"SAR","networks":["masterCard","visa"],"countries":["SA","BH","KW","OM","QA","AE","JO"],"is_digital":false,"merchant_identifier":"merchant.pay.salla.sa.2"},"installments":[],"quick_order":null,"bullet_delivery":null,"order_options":{"mandatory":false}},"meta":{"title":"","description":"","keywords":""},"scope":null,"template":null,"contacts":{"mobile":"8001111210","phone":"8001111210","email":"support@salla.dev","telegram":"SallaDev"},"social":{"instagram":"https:\/\/www.instagram.com\/sallaapp","twitter":"https:\/\/twitter.com\/SallaApp","youtube":"https:\/\/www.youtube.com\/c\/SallaApp"},"description":"\u0645\u062a\u062c\u0631 \u062a\u062c\u0631\u064a\u0628\u064a - Demo Store","apps":{"appstore":"https:\/\/apps.apple.com\/sa\/app\/%D8%B3%D9%84%D8%A9\/id1148458340","googleplay":"https:\/\/play.google.com\/store\/apps\/details?id=com.emoney.sallacp&hl=en&gl=US"},"features":["loyalty-system-v2","conditional-offer","custom-fields","legacy-login-flow","guest-checkout","embedded-login-checkout","salla-account","tiered-offer","bullet-delivery-v2","order-options","feedback-video-attachments","customer-data-export","allow-reviews-from-product-page","ai-driven-personalized-product","reorder","new_popup_rating"],"is_merchant":false,"support_pickup":true,"order_instruction":{"thank_title":"\u0634\u0643\u0631\u0627 \u0644\u062a\u0633\u0648\u0651\u0642\u0643\u0645 \u0639\u0628\u0631 \u0645\u062a\u062c\u0631\u0646\u0627 \u263a\ufe0f","order_instructions_payment_waiting":"\u0637\u0644\u0628\u0643 \u062d\u0627\u0644\u064a\u0627\u064b \u063a\u064a\u0631 \u0645\u0624\u0643\u062f !<br>\u0646\u0623\u0645\u0644 \u062a\u0623\u0643\u064a\u062f \u0627\u0644\u062f\u0641\u0639 \u0639\u0628\u0631 \u0627\u0644\u0631\u0627\u0628\u0637 \u0627\u0644\u0645\u0631\u0633\u0644 \u0644\u062c\u0648\u0627\u0644\u0643","order_instructions_under_review":"\u062a\u0645 \u0627\u0633\u062a\u0642\u0628\u0627\u0644 \u0637\u0644\u0628\u0643 \u0628\u0646\u062c\u0627\u062d<br>\u0633\u062a\u062a\u0645 \u0645\u0631\u0627\u062c\u0639\u0629 \u0627\u0644\u0637\u0644\u0628 \u0648\u062a\u0623\u0643\u064a\u062f\u0647 \u0641\u064a \u0623\u0642\u0631\u0628 \u0648\u0642\u062a","order_instructions_completed":"\u062a\u0645 \u0627\u0633\u062a\u0642\u0628\u0627\u0644 \u0637\u0644\u0628\u0643 \u0628\u0646\u062c\u0627\u062d<br>\u0633\u064a\u062a\u0645 \u062a\u062c\u0647\u064a\u0632 \u0627\u0644\u0637\u0644\u0628 \u0641\u064a \u0623\u0642\u0631\u0628 \u0648\u0642\u062a"},"shipping":{"delivery_location":null,"support_pickup":true,"has_bullet_delivery_tag":false},"api":"https:\/\/api.salla.dev\/store\/v1\/"},"debug":true,"theme":{"name":"draft-2094908966","profile":{"id":1379546958,"name":null},"mode":"edit","translations_hash":"179928888338","is_rtl":true,"color":{"primary":"#aed8e0","text":"#000000","is_dark":false,"reverse_primary":"#aed8e0","reverse_text":"#2f5961"},"settings":{"is_breadcrumbs_enabled":true,"placeholder":"images\/placeholder.png"},"assets":"https:\/\/cdn.jsdelivr.net\/gh\/ahmfh8\/raih-theme-assets@0be5c92\/:path","bundle_assets":"https:\/\/cdn.assets.salla.network\/themes\/:bundle\/latest\/:component.js","twilight":{"version":"2.14.584"}},"trace_console":false,"user":{"id":"","type":"guest","email":null,"mobile":null,"language_code":"ar","currency_code":"SAR","country_code":"SA","can_comment":false,"avatar":"https:\/\/cdn.assets.salla.network\/prod\/stores\/themes\/default\/assets\/images\/avatar_male.png","is_hidden_name":null,"default_geo_location":{"lat":21.5168,"lng":39.2192},"first_name":null,"last_name":null,"is_notifiable":false,"fetched_at":"2026-09-25","gender":"","birthday":null},"currencies":{"AED":{"code":"AED","name":"\u062f\u0631\u0647\u0645 \u0627\u0645\u0627\u0631\u0627\u062a\u064a","symbol":" \u062f.\u0625","amount":0.978012,"country_code":"ae"},"SAR":{"code":"SAR","name":"\u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a","symbol":"\u0631.\u0633","amount":1,"country_code":"sa"},"USD":{"code":"USD","name":"\u062f\u0648\u0644\u0627\u0631 \u0623\u0645\u0631\u064a\u0643\u064a","symbol":"$","amount":0.266307,"country_code":"us"}},"languages":{"AR":{"name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","code":"ar","url":"https:\/\/assets.salla.sa\/images\/flags\/ar.svg","is_rtl":true,"country_code":"sa"}},"events":{"api::setHeaders":[{"s-no-cache":true,"s-theme-id":2094908966,"s-theme-name":"draft-2094908966","s-version-id":1379546958}],"Product Viewed":[{"id":1380326115,"name":"\u0633\u0643\u0648\u062a\u0631 \u0631\u0627\u064a\u062d \u0628\u0631\u0648 \u0644\u0644\u0643\u0628\u0627\u0631","categories":[{"id":12248346,"name":"\u0633\u0643\u0648\u062a\u0631\u0627\u062a"}],"category":"\u0633\u0643\u0648\u062a\u0631\u0627\u062a","price":1300,"quantity":1,"variant":"","brand":"","image":"https:\/\/cdn.files.salla.network\/products\/1799288883\/4c17f180-1a23-423c-ab20-68c7bbeab5a1-original.webp","currency":"SAR","sku":"","value":1300,"url":"https:\/\/salla.design\/dev-ypwvvihy5rlvhifb\/\u0633\u0643\u0648\u062a\u0631-\u0631\u0627\u064a\u062d-\u0628\u0631\u0648-\u0644\u0644\u0643\u0628\u0627\u0631\/p1380326115","image_url":"https:\/\/cdn.files.salla.network\/products\/1799288883\/4c17f180-1a23-423c-ab20-68c7bbeab5a1-original.webp"}]},"page":{"title":"\u0633\u0643\u0648\u062a\u0631 \u0631\u0627\u064a\u062d \u0628\u0631\u0648 \u0644\u0644\u0643\u0628\u0627\u0631","slug":"product.single","id":1380326115,"parent":{"id":"product.index","title":"\u0633\u0643\u0648\u062a\u0631\u0627\u062a","url":"https:\/\/salla.design\/dev-ypwvvihy5rlvhifb\/\u0633\u0643\u0648\u062a\u0631\u0627\u062a\/c338806973"}},"maintenance":true,"maintenance_details":{"title":"\u0627\u0644\u0645\u062a\u062c\u0631 \u0642\u064a\u062f \u0627\u0644\u0635\u064a\u0627\u0646\u0629","button_title":null,"button_full_title":null,"button_url":null,"message":"\u0639\u0630\u0631\u0627\u064b \u0639\u0632\u064a\u0632\u064a \u0627\u0644\u0639\u0645\u064a\u0644\u060c \u0627\u0644\u0645\u062a\u062c\u0631 \u062d\u0627\u0644\u064a\u0627\u064b \u0642\u064a\u062f \u0627\u0644\u0635\u064a\u0627\u0646\u0629 \u0648 \u0633\u0646\u0639\u0627\u0648\u062f \u0627\u0644\u0639\u0645\u0644 \u062e\u0644\u0627\u0644 \u0641\u062a\u0631\u0629 \u0648\u062c\u064a\u0632\u0629"},"headers":{"S-Ray":50,"s-version-id":1379546958},"login":{"url":"https:\/\/accounts.salla.com","turnstile_site_key":"","turnstile":{"key":"","level":"off"},"social":{"google":true,"facebook":true,"apple":true,"x":false}},"jitsu":{"host":"https:\/\/st.salla.dev","key":"yAKBxDDlIeg8c0qsNtlkjo4up1iTv68J:XSd8tVk8rqijFlxTacQv5QlAGcVuYPzy","events":["Order Completed","Product Added","Product Removed","Product Viewed","Product Added to Wishlist","Product Removed from Wishlist","Cart Viewed","Products Searched","Product List Viewed","Signed Up","Signed In","Signed Out","Product Reviewed","Product Shared","Checkout Started","Payment Info Entered","Coupon Applied","Coupon Denied","Coupon Entered","Coupon Removed","Checkout Step Completed","Promotion Viewed","Promotion Clicked","User Profile Updated","Product List Filtered","Cart Updated","Payment Failed","Checkout Step Viewed","Market Selected","Address Added","Address Updated","Map Clicked","Product Reordered","Recommendation List Viewed","Product Clicked","Payment Submitted","Payment Succeeded","Payment Pending","Guest Registered"],"track_url":null,"context":{"extra":{"version":"1.1243.15","headers":[]}}},"affiliate":{"utm_url":"https:\/\/api.salla.dev\/marketing\/v1\/tracking\/visits","cta_enabled":true},"swoole":["comments","rating","feedback","loyalty","advertisements","menus","products","offers","orders","reviews","currencies","scopes","languages","components"],"policy_url":""},"page.view":{"route":"product.showWithSlug","link":"https:\/\/salla.design\/dev-ypwvvihy5rlvhifb\/%D8%B3%D9%83%D9%88%D8%AA%D8%B1-%D8%B1%D8%A7%D9%8A%D8%AD-%D8%A8%D8%B1%D9%88-%D9%84%D9%84%D9%83%D8%A8%D8%A7%D8%B1\/p1380326115","fingerprint":""}})
+      }
+
+      if (window.Salla && Salla.status)
+        dispatchSallaEvents();
+      else window.addEventListener('salla::created', dispatchSallaEvents, {once: true});
+    </script>
+<script type="text/javascript">
+    var _user_id = ''; // Set to the user's ID, username, or email address, or '' if not yet known.
+    var _session_id = ''; // Set to a unique session ID for the visitor's current browsing session.
+
+    var _sift = window._sift = window._sift || [];
+    _sift.push(['_setAccount', '42e2369b33']);
+    _sift.push(['_setUserId', _user_id]);
+    _sift.push(['_setSessionId', _session_id]);
+    _sift.push(['_trackPageview']);
+
+   (function() {
+     function ls() {
+       var e = document.createElement('script');
+       e.src = 'https://cdn.sift.com/s.js';
+       document.body.appendChild(e);
+     }
+     if (window.attachEvent) {
+       window.attachEvent('onload', ls);
+     } else {
+       window.addEventListener('load', ls, false);
+     }
+   })();
+  </script><script>
+(function () {
+    var Salla = window.Salla = window.Salla || {};
+    if (Salla.appScope) { return; }
+
+    
+    var appCtx = {};
+
+    function isAppKey(key) { return typeof key === 'string' && key.indexOf('app.') === 0; }
+
+    
+    var contexts = {"apps":{"d08db4b217b4ff44ff5d578618480ec8":[]}};
+    var appsCtx  = contexts.apps || {};
+    var base     = {};   
+    Object.keys(appsCtx).forEach(function (scopeId) {
+        appCtx[scopeId] = appsCtx[scopeId] || {};
+        base[scopeId]   = Object.assign({}, appCtx[scopeId]);
+    });
+
+    
+    Salla.appScope = function (scopeId) {
+        
+        function realSalla()  { return window.salla || window.Salla || {}; }
+        function realConfig() { return realSalla().config || {}; }
+
+        
+        function bucket() {
+            appCtx[scopeId] = appCtx[scopeId] || {};
+            return appCtx[scopeId];
+        }
+
+        
+        function passthrough(obj, prop) {
+            var member = obj[prop];
+            return typeof member === 'function' ? member.bind(obj) : member;
+        }
+
+        
+        function getConfig(key, fallback) {
+            if (isAppKey(key)) {
+                var sub = key.slice(4), b = bucket();
+                return sub in b ? b[sub] : fallback;
+            }
+            var cfg = realConfig();
+            return typeof cfg.get === 'function' ? cfg.get(key, fallback) : fallback;
+        }
+
+        function setConfig(key, value) {
+            if (isAppKey(key)) { bucket()[key.slice(4)] = value; return value; }
+            var cfg = realConfig();
+            return typeof cfg.set === 'function' ? cfg.set(key, value) : value;
+        }
+
+        function hasConfig(key) {
+            if (isAppKey(key)) { return key.slice(4) in bucket(); }
+            return key in realConfig();
+        }
+
+        
+        var configProxy = new Proxy({}, {
+            get: function (target, prop) {
+                if (prop === 'get') { return getConfig; }
+                if (prop === 'set') { return setConfig; }
+                if (prop === 'has') { return hasConfig; }
+                
+                if (isAppKey(prop)) { return getConfig(prop); }
+                return passthrough(realConfig(), prop);
+            },
+            set: function (target, prop, value) { setConfig(prop, value); return true; },
+            has: function (target, prop) { return hasConfig(prop); }
+        });
+
+        
+        return new Proxy({}, {
+            get: function (target, prop) {
+                return prop === 'config' ? configProxy : passthrough(realSalla(), prop);
+            },
+            set: function (target, prop, value) {
+                if (prop === 'config') { return true; }
+                realSalla()[prop] = value;
+                return true;
+            }
+        });
+    };
+
+    
+    (function () {
+        var PORTAL   = "https:\/\/portal.salla.partners";
+        var scopeMap = {"691365818":"d08db4b217b4ff44ff5d578618480ec8"};   
+        var DEFERRED = 'script[type="text/salla-snippet"]';
+        var ran      = {};   
+
+        
+        document.addEventListener('click', function (event) {
+            var link = event.target.closest && event.target.closest('a[href]');
+            if (! link) { return; }
+            var url;
+            try { url = new URL(link.href, location.href); } catch (e) { return; }
+            if (url.origin !== location.origin || url.searchParams.has('preview')) { return; }
+            url.searchParams.set('preview', '1');
+            link.href = url.toString();
+        }, true);
+
+        
+        function whenReady(fn) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', fn, { once: true });
+            } else { fn(); }
+        }
+
+        
+        function injectNode(node) {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = node.getAttribute('data-src');
+            if (node.dataset.snippetId) { s.setAttribute('data-snippet-id', node.dataset.snippetId); }
+            s.setAttribute('data-scope-id', node.dataset.scopeId || '');
+            node.parentNode.insertBefore(s, node.nextSibling);
+        }
+
+        
+        function inject(scopeId, force) {
+            document.querySelectorAll(DEFERRED).forEach(function (node) {
+                var sid = node.dataset.scopeId || '';
+                if (scopeId && sid !== scopeId) { return; }
+                if (node.dataset.injected && ! force) { return; }
+                node.dataset.injected = '1';
+                ran[sid] = true;
+                injectNode(node);
+            });
+        }
+
+        
+        function resolveScope(data) {
+            if (data.appId != null) { return scopeMap[String(data.appId)] || null; }
+            return null;
+        }
+
+        
+        function apply(data) {
+            var scopeId = resolveScope(data);
+            if (! scopeId) { return; }
+            appCtx[scopeId] = Object.assign({}, base[scopeId] || {}, data.app || {});
+            var force = ran[scopeId] === true;   
+            whenReady(function () { inject(scopeId, force); });
+        }
+
+        window.addEventListener('message', function (event) {
+            if (event.origin !== PORTAL) { return; }
+            if (event.source !== window.parent) { return; }
+            if (! event.data || event.data.type !== 'salla:preview-mocks') { return; }
+            apply(event.data);
+        });
+
+        
+        try {
+            window.parent.postMessage({ type: 'salla:preview-ready' }, PORTAL);
+        } catch (e) {}
+
+        
+        setTimeout(function () { whenReady(function () { inject(null, false); }); }, 800);
+    })();
+})();
+</script>
+
+<script type="text/salla-snippet" data-snippet-id="10158" data-scope-id="d08db4b217b4ff44ff5d578618480ec8" data-src="https://cdn.portal.files.salla.network/snippets/dev/691365818/198903744.js?t=1790310552"></script>
+<script type="text/javascript">
+  Salla.onReady(() => {
+const latestProduct = {
+name: 'latest-product', 
+track: function(event, payload) {
+  if (event !== 'Product Viewed') return;
+
+  const pageId = salla.config.get('page').id;
+      console.log('pageId:', pageId, 'is product.single?', salla.url.is_page('product.single'));
+  
+      if (!pageId || !salla.url.is_page('product.single')) return;
+  
+      const storageKey = 's-viewed-products-' + salla.config.get('store')?.id;
+  
+      let existingIds = salla.storage.get(storageKey);
+      console.log('before get:', existingIds, 'type:', typeof existingIds);
+  
+      if (typeof existingIds === 'string') {
+        try { existingIds = JSON.parse(existingIds); } catch { existingIds = []; }
+      }
+      if (!Array.isArray(existingIds)) existingIds = [];
+  
+      const pid = String(pageId);
+      const filteredIds = existingIds.filter(id => String(id) !== pid);
+      filteredIds.unshift(pid);
+  
+      salla.storage.set(storageKey, filteredIds);
+  
+      console.log('after set:', salla.storage.get(storageKey));
+}, 
+page:()=>{}};
+Salla.analytics.registerTracker(latestProduct);
+  });
+</script>
+<script type="text/javascript">
+  Salla.onReady(() => {
+    (() => {
+      
+      const allowed_pages = ["thank-you"]; 
+      const title = {"ar":"شاهدتها مؤخرا","en":"watched it recently"};
+      const limit = "32";
+      const lang = salla.config.get('user')?.language_code || 'ar';
+
+      const injectSection = () => {
+        console.log("allowed_pages:", allowed_pages);
+        console.log("title:", title[lang]);
+        console.log("limit:", limit);
+
+        const slug = salla.config.get("page")?.slug;
+        if (!allowed_pages.includes(slug)) return null;
+
+        let section = document.getElementById("viewed-section");
+        if (section) return section;
+
+        const footer = document.querySelector(".store-footer");
+        if (!footer) return null;
+
+        const html = `
+          <section id="viewed-section" class="s-block container mt-6 sm:mt-8">
+            <div class="s-block__title">
+              <div class="right-side">
+                <h2>${title[lang]}</h2>
+              </div>
+            </div>
+
+            <salla-products-slider autoplay id="viewed-products-list" source="selected" limit="${limit}"></salla-products-slider>
+          </section>
+        `;
+
+        footer.insertAdjacentHTML("beforebegin", html);
+        return document.getElementById("viewed-section");
+      };
+
+      const initViewedProducts = () => {
+        const section = document.getElementById("viewed-section");
+        const list = document.getElementById("viewed-products-list");
+
+        if (!section || !list) return;
+
+        if (!window.salla?.storage || !window.salla?.config) {
+          section.style.display = "none";
+          return;
+        }
+
+        const storeId = salla.config.get("store")?.id;
+        const key = "s-viewed-products-" + storeId;
+
+        const products = salla.storage.get(key) || [];
+        const currentProductId = salla.config.get("page")?.id;
+
+        if (!Array.isArray(products) || products.length === 0) {
+          section.style.display = "none";
+          return;
+        }
+
+        const filteredProducts = currentProductId
+          ? products.filter((product) => {
+              const productId = (product && product.id) ? product.id : product;
+              return String(productId) !== String(currentProductId);
+            })
+          : products;
+
+        if (filteredProducts.length === 0) {
+          section.style.display = "none";
+          return;
+        }
+        
+        const limitedProducts = filteredProducts.slice(0, 32);
+
+        list.setAttribute("source-value", JSON.stringify(limitedProducts));
+        section.style.display = "";
+      };
+
+      const run = () => {
+        const section = injectSection();
+        if (!section) return;
+        initViewedProducts();
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", run);
+      } else {
+        run();
+      }
+    })();
+  });
+</script>
+<salla-hook name="body:end"></salla-hook><script defer crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0be5c92/app.js"></script>
+
+<salla-offer-modal data-testid="store-offer-modal"></salla-offer-modal>
+<salla-search data-testid="store-search-modal"></salla-search>
+<salla-login-modal data-testid="store-login-modal"></salla-login-modal>
+    <script defer src="https://cdn.jsdelivr.net/gh/ahmfh8/raih-theme-assets@0be5c92/product.js"></script>
+        </body>
+</html>
