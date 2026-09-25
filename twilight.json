@@ -1750,6 +1750,17 @@
                 {
                     "type": "boolean",
                     "icon": "sicon-toggle-off",
+                    "label": "إظهار أيقونات الثقة",
+                    "id": "icons_show",
+                    "format": "switch",
+                    "required": false,
+                    "value": false,
+                    "selected": false,
+                    "description": "الضمان والتوصيل والقطع والدفع. مخفية افتراضيًا؛ شريط «قسّطها وارتاح» يبقى ظاهر"
+                },
+                {
+                    "type": "boolean",
+                    "icon": "sicon-toggle-off",
                     "label": "إظهار: الضمان",
                     "id": "warranty_show",
                     "format": "switch",
@@ -2635,6 +2646,241 @@
                     "placeholder": null,
                     "minLength": 0,
                     "maxLength": 160
+                }
+            ]
+        },
+        {
+            "key": "c094d9b5-d064-40a2-b543-4071a62f5151",
+            "title": {
+                "en": "RAIH After-sales",
+                "ar": "معك بعد الشراء (رايح)"
+            },
+            "icon": "sicon-shield-check",
+            "path": "home.raih-after",
+            "fields": [
+                {
+                    "type": "static",
+                    "format": "description",
+                    "id": "raih-after-note",
+                    "value": "<div>4 بطاقات «معك بعد الشراء» وشريط مساعدة تحتها (واتساب + «ساعدني أختار» يفتح مساعد رايح). رقم الواتساب من «هوية رايح». الجوال: 2×2، الكمبيوتر: صف من 4.</div>"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "id": "title",
+                    "value": "معك بعد الشراء",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 60
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الوصف",
+                    "id": "description",
+                    "value": "ما ينتهي دورنا بوصول الطلب، نتابع معك لين تستمتع بمشوارك.",
+                    "format": "textarea",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 160
+                },
+                {
+                    "type": "static",
+                    "format": "line",
+                    "id": "raih-after-line-warranty"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البطاقة 1: العنوان",
+                    "id": "warranty_title",
+                    "value": "ضمان 6 أشهر",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 40
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البطاقة 1: السطر",
+                    "id": "warranty_text",
+                    "value": "على عيوب التصنيع، ونستبدل أو نصلّح بدون تعقيد",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 90
+                },
+                {
+                    "type": "static",
+                    "format": "line",
+                    "id": "raih-after-line-service"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البطاقة 2: العنوان",
+                    "id": "service_title",
+                    "value": "صيانة وقطع أصلية",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 40
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البطاقة 2: السطر",
+                    "id": "service_text",
+                    "value": "قطع غيار حسب موديلك، وصيانة معتمدة",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 90
+                },
+                {
+                    "type": "static",
+                    "format": "line",
+                    "id": "raih-after-line-returns"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البطاقة 3: العنوان",
+                    "id": "returns_title",
+                    "value": "استرجاع سهل",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 40
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البطاقة 3: السطر",
+                    "id": "returns_text",
+                    "value": "حسب سياسة الاسترجاع",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 90
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-link",
+                    "label": "البطاقة 3: رابط سياسة الاسترجاع",
+                    "id": "returns_url",
+                    "value": [],
+                    "description": "فارغ = البطاقة بدون رابط",
+                    "required": false,
+                    "format": "variable-list",
+                    "searchable": true,
+                    "source": "custom",
+                    "sources": [
+                        {
+                            "label": "صفحة تعريفية",
+                            "key": "pages",
+                            "value": "pages"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
+                    ]
+                },
+                {
+                    "type": "static",
+                    "format": "line",
+                    "id": "raih-after-line-support"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البطاقة 4: العنوان",
+                    "id": "support_title",
+                    "value": "دعم على الواتساب",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 40
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "البطاقة 4: السطر",
+                    "id": "support_text",
+                    "value": "نرد عليك ونساعدك تختار أو تصلّح",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 90
+                },
+                {
+                    "type": "static",
+                    "format": "line",
+                    "id": "raih-after-line-help"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "شريط المساعدة: النص",
+                    "id": "help_text",
+                    "value": "محتار أو عندك سؤال؟ كلّمنا واتساب ونرد عليك بسرعة",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 120
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "شريط المساعدة: زر الواتساب",
+                    "id": "wa_label",
+                    "value": "كلّمنا واتساب",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 30
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "شريط المساعدة: زر المساعد",
+                    "id": "finder_label",
+                    "value": "ساعدني أختار",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 30
                 }
             ]
         },
