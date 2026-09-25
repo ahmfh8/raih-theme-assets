@@ -2521,6 +2521,62 @@
             ]
         },
         {
+            "key": "e7740bef-4788-48de-957f-e9401b3e2ba6",
+            "title": {
+                "en": "RAIH Finder",
+                "ar": "مساعد رايح (اختيار السكوتر)"
+            },
+            "icon": "sicon-magic-wand",
+            "path": "home.raih-finder",
+            "fields": [
+                {
+                    "type": "static",
+                    "format": "description",
+                    "id": "raih-finder-note",
+                    "value": "<div>4 أسئلة ثم ترشيح من منتجات سلة المتوفرة. يعتمد على «العنوان الفرعي» لكل منتج (كم = المدى، كجم = أقصى وزن، سنة = العمر) وعلى وسوم الاستخدام: <strong>دوام</strong>، <strong>مسافات</strong>، <strong>أطفال</strong>، <strong>تسلية</strong>. يفتح أيضًا من بانر تصنيف السكوترات، وقائمة الجوال، والرابط ?finder=1.</div>"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "id": "title",
+                    "value": "محتار وش تختار؟",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 60
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الوصف",
+                    "id": "description",
+                    "value": "جاوب 4 أسئلة ونرشّح لك الأنسب في 30 ثانية",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 120
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "نص الزر",
+                    "id": "cta",
+                    "value": "ابدأ",
+                    "format": "text",
+                    "required": false,
+                    "description": null,
+                    "placeholder": null,
+                    "minLength": 0,
+                    "maxLength": 20
+                }
+            ]
+        },
+        {
             "key": "a72dea37-edd4-42f4-ba5a-28e1bce9f481",
             "title": {
                 "en": "RAIH Video reels",
