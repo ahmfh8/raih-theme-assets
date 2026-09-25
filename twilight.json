@@ -1128,6 +1128,45 @@
             "maxLength": "160"
         },
         {
+            "id": "raih_social_instagram",
+            "label": "الفوتر: رابط انستقرام",
+            "description": "يُستخدم إذا ما فيه رابط في إعدادات المتجر. فارغ + ما فيه رابط في المتجر = الأيقونة مخفية",
+            "type": "string",
+            "icon": "sicon-link",
+            "format": "text",
+            "required": false,
+            "value": "",
+            "placeholder": "https://…",
+            "minLength": 0,
+            "maxLength": "500"
+        },
+        {
+            "id": "raih_social_snapchat",
+            "label": "الفوتر: رابط سناب شات",
+            "description": "يُستخدم إذا ما فيه رابط في إعدادات المتجر. فارغ + ما فيه رابط في المتجر = الأيقونة مخفية",
+            "type": "string",
+            "icon": "sicon-link",
+            "format": "text",
+            "required": false,
+            "value": "",
+            "placeholder": "https://…",
+            "minLength": 0,
+            "maxLength": "500"
+        },
+        {
+            "id": "raih_social_tiktok",
+            "label": "الفوتر: رابط تيك توك",
+            "description": "يُستخدم إذا ما فيه رابط في إعدادات المتجر. فارغ + ما فيه رابط في المتجر = الأيقونة مخفية",
+            "type": "string",
+            "icon": "sicon-link",
+            "format": "text",
+            "required": false,
+            "value": "",
+            "placeholder": "https://…",
+            "minLength": 0,
+            "maxLength": "500"
+        },
+        {
             "id": "raih_sbc_url",
             "label": "شارة المركز السعودي للأعمال: الرابط",
             "description": "رابط شهادة التوثيق. فارغ = الشارة مخفية",
