@@ -1154,6 +1154,17 @@
             "maxLength": "500"
         },
         {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "إظهار «حمّل التطبيق» في الفوتر",
+            "id": "raih_show_app_icons",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false,
+            "description": "روابط Google Play وApp Store من إعدادات المتجر. مخفية افتراضيًا"
+        },
+        {
             "type": "static",
             "id": "raih-static-line3",
             "format": "line"
