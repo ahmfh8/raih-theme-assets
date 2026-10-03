@@ -2076,8 +2076,8 @@
                     "id": "installbar_preview",
                     "format": "switch",
                     "required": false,
-                    "value": true,
-                    "selected": true,
+                    "value": false,
+                    "selected": false,
                     "description": "يُظهر تابي وتمارا حتى لو غير مفعّلة في المتجر. أطفئه قبل الإطلاق"
                 }
             ]
