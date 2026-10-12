@@ -3778,7 +3778,8 @@
                             "icon": "sicon-format-text-alt",
                             "value": null,
                             "multilanguage": false,
-                            "required": false
+                            "required": false,
+                            "maxLength": 255
                         },
                         {
                             "id": "items.avatar",
@@ -3820,7 +3821,8 @@
                             "icon": "sicon-format-text-alt",
                             "value": null,
                             "multilanguage": true,
-                            "required": false
+                            "required": false,
+                            "maxLength": 1000
                         }
                     ],
                     "required": false,
