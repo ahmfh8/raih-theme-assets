@@ -118,7 +118,7 @@
             "icon": "sicon-format-text-alt",
             "format": "text",
             "required": false,
-            "value": "ضمان على عيوب التصنيع",
+            "value": "استبدال أو استرجاع خلال 7 أيام لو وصلك معيب",
             "placeholder": null,
             "minLength": 0,
             "maxLength": "160"
