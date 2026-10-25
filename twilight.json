@@ -2080,6 +2080,188 @@
                     "value": false,
                     "selected": false,
                     "description": "يُظهر تابي وتمارا حتى لو غير مفعّلة في المتجر. أطفئه قبل الإطلاق"
+                },
+                {
+                    "type": "static",
+                    "format": "description",
+                    "id": "raih-paybanner-note",
+                    "value": "<div><strong>بنر الدفع</strong> (بدل شريط التقسيط): شريحة لكل مزوّد مفعّل. شريحة واحدة = بنر ثابت، شريحتان = تتبدّلان كل 4 ثوانٍ.</div>"
+                },
+                {
+                    "type": "static",
+                    "format": "line",
+                    "id": "raih-pay-line-tabby",
+                    "value": null
+                },
+                {
+                    "type": "boolean",
+                    "icon": "sicon-toggle-off",
+                    "label": "بنر الدفع: إظهار شريحة تابي",
+                    "id": "pay_tabby_show",
+                    "format": "switch",
+                    "required": false,
+                    "value": true,
+                    "selected": true,
+                    "description": "تظهر فقط إذا كان تابي مفعّلًا في طرق الدفع بالمتجر (أو مع «إظهار شريط التقسيط للاختبار»)"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "شريحة تابي: النص",
+                    "id": "pay_tabby_title",
+                    "format": "text",
+                    "required": false,
+                    "value": "قسّمها على 4 دفعات مع تابي",
+                    "description": null,
+                    "maxLength": 80
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "شريحة تابي: نص الزر",
+                    "id": "pay_tabby_cta",
+                    "format": "text",
+                    "required": false,
+                    "value": "تسوّق الآن",
+                    "description": null,
+                    "maxLength": 30
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-link",
+                    "format": "variable-list",
+                    "searchable": true,
+                    "source": "custom",
+                    "required": false,
+                    "value": null,
+                    "sources": [
+                        {
+                            "label": "تصنيف",
+                            "key": "categories",
+                            "value": "categories"
+                        },
+                        {
+                            "label": "التخفيضات",
+                            "key": "offers_link",
+                            "value": "offers_link"
+                        },
+                        {
+                            "label": "منتجات مع وسم",
+                            "key": "products_tags",
+                            "value": "products_tags"
+                        },
+                        {
+                            "label": "صفحة تعريفية",
+                            "key": "pages",
+                            "value": "pages"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
+                    ],
+                    "label": "شريحة تابي: رابط الزر",
+                    "id": "pay_tabby_url",
+                    "description": "فارغ = تصنيف السكوترات"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-image",
+                    "label": "شريحة تابي: الشعار",
+                    "id": "pay_tabby_logo",
+                    "format": "image",
+                    "required": false,
+                    "value": null,
+                    "description": "فارغ = شعار تابي الرسمي"
+                },
+                {
+                    "type": "static",
+                    "format": "line",
+                    "id": "raih-pay-line-tamara",
+                    "value": null
+                },
+                {
+                    "type": "boolean",
+                    "icon": "sicon-toggle-off",
+                    "label": "بنر الدفع: إظهار شريحة تمارا",
+                    "id": "pay_tamara_show",
+                    "format": "switch",
+                    "required": false,
+                    "value": false,
+                    "selected": false,
+                    "description": "تظهر فقط إذا كان تمارا مفعّلًا في طرق الدفع بالمتجر (أو مع «إظهار شريط التقسيط للاختبار»)"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "شريحة تمارا: النص",
+                    "id": "pay_tamara_title",
+                    "format": "text",
+                    "required": false,
+                    "value": "قسّمها على دفعات مع تمارا",
+                    "description": null,
+                    "maxLength": 80
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "شريحة تمارا: نص الزر",
+                    "id": "pay_tamara_cta",
+                    "format": "text",
+                    "required": false,
+                    "value": "تسوّق الآن",
+                    "description": null,
+                    "maxLength": 30
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-link",
+                    "format": "variable-list",
+                    "searchable": true,
+                    "source": "custom",
+                    "required": false,
+                    "value": null,
+                    "sources": [
+                        {
+                            "label": "تصنيف",
+                            "key": "categories",
+                            "value": "categories"
+                        },
+                        {
+                            "label": "التخفيضات",
+                            "key": "offers_link",
+                            "value": "offers_link"
+                        },
+                        {
+                            "label": "منتجات مع وسم",
+                            "key": "products_tags",
+                            "value": "products_tags"
+                        },
+                        {
+                            "label": "صفحة تعريفية",
+                            "key": "pages",
+                            "value": "pages"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
+                    ],
+                    "label": "شريحة تمارا: رابط الزر",
+                    "id": "pay_tamara_url",
+                    "description": "فارغ = تصنيف السكوترات"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-image",
+                    "label": "شريحة تمارا: الشعار",
+                    "id": "pay_tamara_logo",
+                    "format": "image",
+                    "required": false,
+                    "value": null,
+                    "description": "فارغ = شعار تمارا الرسمي"
                 }
             ]
         },
