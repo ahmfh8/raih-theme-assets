@@ -2464,8 +2464,8 @@
         {
             "key": "39bfe920-2c4d-420d-a252-ca967bafd10a",
             "title": {
-                "en": "RAIH Best sellers",
-                "ar": "الأكثر طلبًا (رايح)"
+                "en": "Raih Picks",
+                "ar": "مختارات رايح"
             },
             "icon": "sicon-fire",
             "path": "home.raih-bestsellers",
@@ -2482,7 +2482,7 @@
                     "icon": "sicon-format-text-alt",
                     "label": "عنوان القسم",
                     "id": "title",
-                    "value": "الأكثر طلبًا",
+                    "value": "مختارات رايح",
                     "format": "text",
                     "required": false,
                     "description": null,
