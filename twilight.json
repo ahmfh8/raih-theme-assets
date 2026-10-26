@@ -1179,12 +1179,12 @@
         {
             "id": "raih_footer_tagline",
             "label": "وصف رايح في الفوتر",
-            "description": null,
+            "description": "ضع الكلمة بين نجمتين لتظهر بالبرتقالي، مثل: خليك *رايح*",
             "type": "string",
             "icon": "sicon-format-text-alt",
             "format": "text",
             "required": false,
-            "value": "خليك رايح",
+            "value": "خليك *رايح*",
             "placeholder": null,
             "minLength": 0,
             "maxLength": "160"
@@ -1192,13 +1192,13 @@
         {
             "id": "raih_footer_tagline_en",
             "label": "وصف رايح في الفوتر (English)",
-            "description": "النسخة الإنجليزية. اتركه فارغًا للنص الافتراضي",
+            "description": "النسخة الإنجليزية. الكلمة بين نجمتين تظهر بالبرتقالي. فارغ = النص الافتراضي",
             "type": "string",
             "icon": "sicon-format-text-alt",
             "format": "text",
             "required": false,
             "value": null,
-            "placeholder": "Keep Going with RAIH",
+            "placeholder": "Keep Going with *RAIH*",
             "minLength": 0,
             "maxLength": "160"
         },
