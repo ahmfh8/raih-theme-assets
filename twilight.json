@@ -118,7 +118,7 @@
             "icon": "sicon-format-text-alt",
             "format": "text",
             "required": false,
-            "value": "استبدال أو استرجاع خلال 7 أيام لو وصلك معيب",
+            "value": "اشترِ بثقة: استبدال أو استرجاع خلال 7 أيام",
             "placeholder": null,
             "minLength": 0,
             "maxLength": "160"
@@ -135,6 +135,30 @@
             "placeholder": null,
             "minLength": 0,
             "maxLength": "160"
+        },
+        {
+            "id": "raih_topstrip_campaign_on",
+            "label": "الشريط العلوي: رسالة حملة",
+            "description": "شغّله لإظهار رسالة حملة تتبدّل مع النص الثابت كل 5 ثوانٍ (بتلاشٍ). مطفأ = النص الثابت فقط",
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false
+        },
+        {
+            "id": "raih_topstrip_campaign",
+            "label": "الشريط العلوي: نص رسالة الحملة",
+            "description": "يظهر فقط إذا كان مفتاح «رسالة حملة» مشغّلًا. فارغ = لا شيء",
+            "type": "string",
+            "icon": "sicon-format-text-alt",
+            "format": "text",
+            "required": false,
+            "value": "",
+            "placeholder": "مثال: عروض نهاية الأسبوع على السكوترات",
+            "minLength": 0,
+            "maxLength": "120"
         },
         {
             "id": "raih_free_shipping_min",
@@ -1121,7 +1145,7 @@
             "icon": "sicon-format-text-alt",
             "format": "text",
             "required": false,
-            "value": "كل مشوار له رايح. نقرّب لك الاختيار، ونبقى معك بعد وصول الطلب.",
+            "value": "خليك رايح",
             "placeholder": null,
             "minLength": 0,
             "maxLength": "160"
@@ -1164,6 +1188,32 @@
             "placeholder": "https://…",
             "minLength": 0,
             "maxLength": "500"
+        },
+        {
+            "id": "raih_qv_details",
+            "label": "العرض السريع: نص زر التفاصيل",
+            "description": "الزر المحدد بجانب «أضف للسلة». اتركه فارغًا للنص الافتراضي: «التفاصيل الكاملة» / «Full details»",
+            "type": "string",
+            "icon": "sicon-format-text-alt",
+            "format": "text",
+            "required": false,
+            "value": "",
+            "placeholder": "التفاصيل الكاملة",
+            "minLength": 0,
+            "maxLength": "40"
+        },
+        {
+            "id": "raih_search_suggest_title",
+            "label": "البحث: عنوان الكلمات المقترحة",
+            "description": "اتركه فارغًا للنص الافتراضي: «اقتراحات للبحث» / «Search suggestions»",
+            "type": "string",
+            "icon": "sicon-format-text-alt",
+            "format": "text",
+            "required": false,
+            "value": "",
+            "placeholder": "اقتراحات للبحث",
+            "minLength": 0,
+            "maxLength": "40"
         },
         {
             "id": "raih_search_popular",
@@ -1876,7 +1926,7 @@
                     "icon": "sicon-format-text-alt",
                     "label": "السطر الصغير: الضمان",
                     "id": "warranty_text",
-                    "value": "على عيوب التصنيع",
+                    "value": "على عيوب التصنيع، نستبدل أو نصلّح بدون تعقيد",
                     "format": "text",
                     "required": false,
                     "description": null,
@@ -2085,7 +2135,7 @@
                     "type": "static",
                     "format": "description",
                     "id": "raih-paybanner-note",
-                    "value": "<div><strong>بنر الدفع</strong> (بدل شريط التقسيط): شريحة لكل مزوّد مفعّل. شريحة واحدة = بنر ثابت، شريحتان = تتبدّلان كل 4 ثوانٍ.</div>"
+                    "value": "<div><strong>شريط التقسيط</strong>: شريط رفيع تحت الواجهة، الشريط كله رابط (فارغ = تصنيف السكوترات). شريحة لكل مزوّد مفعّل في المتجر؛ شريحتان تتبدّلان كل 4 ثوانٍ.</div>"
                 },
                 {
                     "type": "static",
@@ -2096,7 +2146,7 @@
                 {
                     "type": "boolean",
                     "icon": "sicon-toggle-off",
-                    "label": "بنر الدفع: إظهار شريحة تابي",
+                    "label": "شريط التقسيط: إظهار تابي",
                     "id": "pay_tabby_show",
                     "format": "switch",
                     "required": false,
@@ -2111,20 +2161,9 @@
                     "id": "pay_tabby_title",
                     "format": "text",
                     "required": false,
-                    "value": "قسّمها على 4 دفعات مع تابي",
+                    "value": "قسّمها على 4 دفعات وارتاح",
                     "description": null,
                     "maxLength": 80
-                },
-                {
-                    "type": "string",
-                    "icon": "sicon-format-text-alt",
-                    "label": "شريحة تابي: نص الزر",
-                    "id": "pay_tabby_cta",
-                    "format": "text",
-                    "required": false,
-                    "value": "تسوّق الآن",
-                    "description": null,
-                    "maxLength": 30
                 },
                 {
                     "type": "items",
@@ -2161,7 +2200,7 @@
                             "value": "custom"
                         }
                     ],
-                    "label": "شريحة تابي: رابط الزر",
+                    "label": "شريحة تابي: الرابط",
                     "id": "pay_tabby_url",
                     "description": "فارغ = تصنيف السكوترات"
                 },
@@ -2184,7 +2223,7 @@
                 {
                     "type": "boolean",
                     "icon": "sicon-toggle-off",
-                    "label": "بنر الدفع: إظهار شريحة تمارا",
+                    "label": "شريط التقسيط: إظهار تمارا",
                     "id": "pay_tamara_show",
                     "format": "switch",
                     "required": false,
@@ -2202,17 +2241,6 @@
                     "value": "قسّمها على دفعات مع تمارا",
                     "description": null,
                     "maxLength": 80
-                },
-                {
-                    "type": "string",
-                    "icon": "sicon-format-text-alt",
-                    "label": "شريحة تمارا: نص الزر",
-                    "id": "pay_tamara_cta",
-                    "format": "text",
-                    "required": false,
-                    "value": "تسوّق الآن",
-                    "description": null,
-                    "maxLength": 30
                 },
                 {
                     "type": "items",
@@ -2249,7 +2277,7 @@
                             "value": "custom"
                         }
                     ],
-                    "label": "شريحة تمارا: رابط الزر",
+                    "label": "شريحة تمارا: الرابط",
                     "id": "pay_tamara_url",
                     "description": "فارغ = تصنيف السكوترات"
                 },
@@ -2959,7 +2987,7 @@
                     "icon": "sicon-typography",
                     "label": "الوصف",
                     "id": "description",
-                    "value": "ما ينتهي دورنا بوصول الطلب، نتابع معك لين تستمتع بمشوارك.",
+                    "value": "ضمان، قطع غيار أصلية، ودعم على الواتساب",
                     "format": "textarea",
                     "required": false,
                     "description": null,
@@ -2990,7 +3018,7 @@
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 1: السطر",
                     "id": "warranty_text",
-                    "value": "على عيوب التصنيع، ونستبدل أو نصلّح بدون تعقيد",
+                    "value": "على عيوب التصنيع، نستبدل أو نصلّح بدون تعقيد",
                     "format": "text",
                     "required": false,
                     "description": null,
@@ -3008,7 +3036,7 @@
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 2: العنوان",
                     "id": "service_title",
-                    "value": "صيانة وقطع أصلية",
+                    "value": "قطع غيار أصلية",
                     "format": "text",
                     "required": false,
                     "description": null,
@@ -3021,7 +3049,7 @@
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 2: السطر",
                     "id": "service_text",
-                    "value": "قطع غيار حسب موديلك، وصيانة معتمدة",
+                    "value": "قطع مناسبة لموديلك، اختر اللي تحتاجه",
                     "format": "text",
                     "required": false,
                     "description": null,
@@ -3125,7 +3153,7 @@
                     "icon": "sicon-format-text-alt",
                     "label": "شريط المساعدة: النص",
                     "id": "help_text",
-                    "value": "محتار أو عندك سؤال؟ كلّمنا واتساب ونرد عليك بسرعة",
+                    "value": "عندك سؤال؟ كلّمنا على الواتساب ونرد عليك بسرعة",
                     "format": "text",
                     "required": false,
                     "description": null,
