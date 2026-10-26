@@ -2379,100 +2379,11 @@
                     "type": "collection",
                     "format": "collection",
                     "required": false,
-                    "minLength": 1,
+                    "minLength": 0,
                     "maxLength": 12,
                     "label": "الفئات",
                     "item_label": "فئة",
-                    "value": [
-                        {
-                            "items.title": "العروض",
-                            "items.url": null,
-                            "items.tone": [
-                                {
-                                    "label": "فاتح",
-                                    "value": "soft",
-                                    "key": "a0fb4a8e-b1b2-471b-bf1a-945c16f16ec3"
-                                }
-                            ]
-                        },
-                        {
-                            "items.title": "سكوترات",
-                            "items.url": null,
-                            "items.tone": [
-                                {
-                                    "label": "كحلي فاتح",
-                                    "value": "navy",
-                                    "key": "ad0e11eb-b5ec-44e9-8c30-1aa8a41c57c8"
-                                }
-                            ]
-                        },
-                        {
-                            "items.title": "سيارات أطفال",
-                            "items.url": null,
-                            "items.tone": [
-                                {
-                                    "label": "رملي",
-                                    "value": "warm",
-                                    "key": "2b5cb230-c2df-40ff-a38a-08c67228cb60"
-                                }
-                            ]
-                        },
-                        {
-                            "items.title": "دراجات ودبابات",
-                            "items.url": null,
-                            "items.tone": [
-                                {
-                                    "label": "حجري",
-                                    "value": "stone",
-                                    "key": "87a128c0-922b-41bd-aa32-5bc835d64b5c"
-                                }
-                            ]
-                        },
-                        {
-                            "items.title": "درفت",
-                            "items.url": null,
-                            "items.tone": [
-                                {
-                                    "label": "رمادي مزرق",
-                                    "value": "mist",
-                                    "key": "69579939-39bb-406b-9144-fd4cdb74e6df"
-                                }
-                            ]
-                        },
-                        {
-                            "items.title": "قطع غيار",
-                            "items.url": null,
-                            "items.tone": [
-                                {
-                                    "label": "حجري",
-                                    "value": "stone",
-                                    "key": "87a128c0-922b-41bd-aa32-5bc835d64b5c"
-                                }
-                            ]
-                        },
-                        {
-                            "items.title": "إكسسوارات",
-                            "items.url": null,
-                            "items.tone": [
-                                {
-                                    "label": "فاتح",
-                                    "value": "soft",
-                                    "key": "a0fb4a8e-b1b2-471b-bf1a-945c16f16ec3"
-                                }
-                            ]
-                        },
-                        {
-                            "items.title": "لوحات ورخص",
-                            "items.url": null,
-                            "items.tone": [
-                                {
-                                    "label": "برتقالي فاتح",
-                                    "value": "signature",
-                                    "key": "d2f45a37-08aa-4695-b017-6eaf8bf05045"
-                                }
-                            ]
-                        }
-                    ],
+                    "value": [],
                     "fields": [
                         {
                             "type": "string",
@@ -2581,7 +2492,8 @@
                             "source": "Manual",
                             "required": false
                         }
-                    ]
+                    ],
+                    "description": "فارغة = فئات المتجر من سلة تلقائيًا (ترتيبها وروابطها). أضف بطاقات هنا فقط لاختيار فئات بعينها"
                 },
                 {
                     "type": "static",
