@@ -124,6 +124,19 @@
             "maxLength": "160"
         },
         {
+            "id": "raih_topstrip_warranty_en",
+            "label": "نص الضمان في الشريط العلوي (English)",
+            "description": "النسخة الإنجليزية. اتركه فارغًا للنص الافتراضي",
+            "type": "string",
+            "icon": "sicon-format-text-alt",
+            "format": "text",
+            "required": false,
+            "value": null,
+            "placeholder": "Buy with confidence: replacement or refund within 7 days",
+            "minLength": 0,
+            "maxLength": "160"
+        },
+        {
             "id": "raih_topstrip_shipping",
             "label": "نص الشحن في الشريط العلوي",
             "description": "{amount} = مبلغ الشحن المجاني من الإعداد التالي. فارغ = يختفي",
@@ -133,6 +146,19 @@
             "required": false,
             "value": "شحن مجاني فوق {amount} ر.س",
             "placeholder": null,
+            "minLength": 0,
+            "maxLength": "160"
+        },
+        {
+            "id": "raih_topstrip_shipping_en",
+            "label": "نص الشحن في الشريط العلوي (English)",
+            "description": "النسخة الإنجليزية؛ {amount} = مبلغ الشحن المجاني. فارغ = النص الافتراضي",
+            "type": "string",
+            "icon": "sicon-format-text-alt",
+            "format": "text",
+            "required": false,
+            "value": null,
+            "placeholder": "Free shipping over {amount} SAR",
             "minLength": 0,
             "maxLength": "160"
         },
@@ -157,6 +183,19 @@
             "required": false,
             "value": "",
             "placeholder": "مثال: عروض نهاية الأسبوع على السكوترات",
+            "minLength": 0,
+            "maxLength": "120"
+        },
+        {
+            "id": "raih_topstrip_campaign_en",
+            "label": "الشريط العلوي: نص رسالة الحملة (English)",
+            "description": "نص الحملة في الإنجليزية (يظهر فقط مع تشغيل المفتاح)",
+            "type": "string",
+            "icon": "sicon-format-text-alt",
+            "format": "text",
+            "required": false,
+            "value": "",
+            "placeholder": "e.g. Weekend deals on scooters",
             "minLength": 0,
             "maxLength": "120"
         },
@@ -1151,6 +1190,19 @@
             "maxLength": "160"
         },
         {
+            "id": "raih_footer_tagline_en",
+            "label": "وصف رايح في الفوتر (English)",
+            "description": "النسخة الإنجليزية. اتركه فارغًا للنص الافتراضي",
+            "type": "string",
+            "icon": "sicon-format-text-alt",
+            "format": "text",
+            "required": false,
+            "value": null,
+            "placeholder": "Keep Going with RAIH",
+            "minLength": 0,
+            "maxLength": "160"
+        },
+        {
             "id": "raih_social_instagram",
             "label": "الفوتر: رابط انستقرام",
             "description": "يُستخدم إذا ما فيه رابط في إعدادات المتجر. فارغ + ما فيه رابط في المتجر = الأيقونة مخفية",
@@ -1203,6 +1255,19 @@
             "maxLength": "40"
         },
         {
+            "id": "raih_qv_details_en",
+            "label": "العرض السريع: نص زر التفاصيل (English)",
+            "description": "النسخة الإنجليزية. اتركه فارغًا للنص الافتراضي",
+            "type": "string",
+            "icon": "sicon-format-text-alt",
+            "format": "text",
+            "required": false,
+            "value": null,
+            "placeholder": "Full details",
+            "minLength": 0,
+            "maxLength": "40"
+        },
+        {
             "id": "raih_search_suggest_title",
             "label": "البحث: عنوان الكلمات المقترحة",
             "description": "اتركه فارغًا للنص الافتراضي: «اقتراحات للبحث» / «Search suggestions»",
@@ -1216,6 +1281,19 @@
             "maxLength": "40"
         },
         {
+            "id": "raih_search_suggest_title_en",
+            "label": "البحث: عنوان الكلمات المقترحة (English)",
+            "description": "النسخة الإنجليزية. اتركه فارغًا للنص الافتراضي",
+            "type": "string",
+            "icon": "sicon-format-text-alt",
+            "format": "text",
+            "required": false,
+            "value": null,
+            "placeholder": "Search suggestions",
+            "minLength": 0,
+            "maxLength": "40"
+        },
+        {
             "id": "raih_search_popular",
             "label": "البحث: الكلمات الأكثر بحثًا",
             "description": "تظهر عند الضغط على خانة البحث قبل الكتابة. افصل بين الكلمات بفاصلة (،)",
@@ -1225,6 +1303,19 @@
             "required": false,
             "value": "سكوتر، سيارة أطفال، خوذة، درفت، شاحن",
             "placeholder": "سكوتر، خوذة، …",
+            "minLength": 0,
+            "maxLength": "300"
+        },
+        {
+            "id": "raih_search_popular_en",
+            "label": "البحث: الكلمات الأكثر بحثًا (English)",
+            "description": "النسخة الإنجليزية. اتركه فارغًا للنص الافتراضي",
+            "type": "string",
+            "icon": "sicon-search",
+            "format": "text",
+            "required": false,
+            "value": null,
+            "placeholder": "Scooter, Kids car, Helmet, Drift, Charger",
             "minLength": 0,
             "maxLength": "300"
         },
@@ -1555,43 +1646,43 @@
                     "item_label": "شريحة",
                     "value": [
                         {
-                            "slides.eyebrow": "سكوترات كهربائية",
-                            "slides.title": "مشاويرك",
-                            "slides.accent": "أسرع",
-                            "slides.copy": "للدوام والجامعة والمشاوير اليومية",
-                            "slides.cta": "تسوّق السكوترات",
+                            "slides.eyebrow": null,
+                            "slides.title": null,
+                            "slides.accent": null,
+                            "slides.copy": null,
+                            "slides.cta": null,
                             "slides.url": null,
-                            "slides.alt": "سكوتر كهربائي في طريق مدينة",
+                            "slides.alt": null,
                             "slides.focus_mobile": "15% 80%"
                         },
                         {
-                            "slides.eyebrow": "للمشاوير الطويلة",
-                            "slides.title": "مدى أطول",
-                            "slides.accent": "وقوة أكبر",
-                            "slides.copy": "أداء قوي بشحنة وحدة",
-                            "slides.cta": "شوف الأقوى",
+                            "slides.eyebrow": null,
+                            "slides.title": null,
+                            "slides.accent": null,
+                            "slides.copy": null,
+                            "slides.cta": null,
                             "slides.url": null,
-                            "slides.alt": "سكوتر كهربائي قوي على طريق مفتوح",
+                            "slides.alt": null,
                             "slides.focus_mobile": "15% 80%"
                         },
                         {
-                            "slides.eyebrow": "للأطفال",
-                            "slides.title": "فرحة",
-                            "slides.accent": "عيالهم",
-                            "slides.copy": "سيارات وسكوترات آمنة وممتعة",
-                            "slides.cta": "تسوّق للأطفال",
+                            "slides.eyebrow": null,
+                            "slides.title": null,
+                            "slides.accent": null,
+                            "slides.copy": null,
+                            "slides.cta": null,
                             "slides.url": null,
-                            "slides.alt": "طفل يقود سيارة كهربائية في حوش المنزل",
+                            "slides.alt": null,
                             "slides.focus_mobile": "15% 80%"
                         },
                         {
-                            "slides.eyebrow": "لفترة محدودة",
-                            "slides.title": "عروض",
-                            "slides.accent": "الأسبوع",
-                            "slides.copy": "خصومات مختارة على السكوترات",
-                            "slides.cta": "تسوّق العروض",
+                            "slides.eyebrow": null,
+                            "slides.title": null,
+                            "slides.accent": null,
+                            "slides.copy": null,
+                            "slides.cta": null,
                             "slides.url": null,
-                            "slides.alt": "سكوتر كهربائي في شارع سعودي",
+                            "slides.alt": null,
                             "slides.focus_mobile": "15% 80%"
                         }
                     ],
@@ -1607,7 +1698,8 @@
                             "description": null,
                             "placeholder": null,
                             "minLength": 0,
-                            "maxLength": 60
+                            "maxLength": 60,
+                            "multilanguage": true
                         },
                         {
                             "type": "string",
@@ -1620,7 +1712,8 @@
                             "description": null,
                             "placeholder": null,
                             "minLength": 0,
-                            "maxLength": 60
+                            "maxLength": 60,
+                            "multilanguage": true
                         },
                         {
                             "type": "string",
@@ -1633,7 +1726,8 @@
                             "description": null,
                             "placeholder": null,
                             "minLength": 0,
-                            "maxLength": 40
+                            "maxLength": 40,
+                            "multilanguage": true
                         },
                         {
                             "type": "string",
@@ -1646,7 +1740,8 @@
                             "description": null,
                             "placeholder": null,
                             "minLength": 0,
-                            "maxLength": 180
+                            "maxLength": 180,
+                            "multilanguage": true
                         },
                         {
                             "type": "string",
@@ -1659,7 +1754,8 @@
                             "description": null,
                             "placeholder": null,
                             "minLength": 0,
-                            "maxLength": 40
+                            "maxLength": 40,
+                            "multilanguage": true
                         },
                         {
                             "type": "items",
@@ -1716,7 +1812,8 @@
                             "description": null,
                             "placeholder": null,
                             "minLength": 0,
-                            "maxLength": 120
+                            "maxLength": 120,
+                            "multilanguage": true
                         },
                         {
                             "type": "string",
@@ -1824,39 +1921,42 @@
                     "icon": "sicon-format-text-alt",
                     "label": "نص الزر الثاني (ساعدني في الاختيار)",
                     "id": "secondary_label",
-                    "value": "ساعدني في الاختيار",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": "ينقل إلى قسم مساعد رايح. فارغ = يختفي الزر",
-                    "placeholder": null,
+                    "placeholder": "ساعدني في الاختيار",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "الميزة الأولى أسفل الأزرار",
                     "id": "badge_1",
-                    "value": "ضمان رايح",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": "فارغ = تختفي",
-                    "placeholder": null,
+                    "placeholder": "ضمان رايح",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "الميزة الثانية أسفل الأزرار",
                     "id": "badge_2",
-                    "value": "شحن داخل المملكة",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": "فارغ = تختفي",
-                    "placeholder": null,
+                    "placeholder": "شحن داخل المملكة",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "boolean",
@@ -1913,39 +2013,42 @@
                     "icon": "sicon-format-text-alt",
                     "label": "العنوان: الضمان",
                     "id": "warranty_title",
-                    "value": "ضمان رايح",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "ضمان رايح",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "السطر الصغير: الضمان",
                     "id": "warranty_text",
-                    "value": "على عيوب التصنيع، نستبدل أو نصلّح بدون تعقيد",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "على عيوب التصنيع، نستبدل أو نصلّح بدون تعقيد",
                     "minLength": 0,
-                    "maxLength": 60
+                    "maxLength": 60,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "نص الجوال (كلمتان): الضمان",
                     "id": "warranty_short",
-                    "value": "ضمان رايح",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "ضمان رايح",
                     "minLength": 0,
-                    "maxLength": 20
+                    "maxLength": 20,
+                    "multilanguage": true
                 },
                 {
                     "type": "static",
@@ -1967,39 +2070,42 @@
                     "icon": "sicon-format-text-alt",
                     "label": "العنوان: الشحن",
                     "id": "shipping_title",
-                    "value": "توصيل سريع",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "توصيل سريع",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "السطر الصغير: الشحن",
                     "id": "shipping_text",
-                    "value": "مجاني فوق {amount} ر.س",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "مجاني فوق {amount} ر.س",
                     "minLength": 0,
-                    "maxLength": 60
+                    "maxLength": 60,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "نص الجوال (كلمتان): الشحن",
                     "id": "shipping_short",
-                    "value": "توصيل سريع",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "توصيل سريع",
                     "minLength": 0,
-                    "maxLength": 20
+                    "maxLength": 20,
+                    "multilanguage": true
                 },
                 {
                     "type": "static",
@@ -2021,39 +2127,42 @@
                     "icon": "sicon-format-text-alt",
                     "label": "العنوان: قطع الغيار",
                     "id": "parts_title",
-                    "value": "قطع غيار أصلية",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "قطع غيار أصلية",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "السطر الصغير: قطع الغيار",
                     "id": "parts_text",
-                    "value": "متوفرة حسب موديلك",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "متوفرة حسب موديلك",
                     "minLength": 0,
-                    "maxLength": 60
+                    "maxLength": 60,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "نص الجوال (كلمتان): قطع الغيار",
                     "id": "parts_short",
-                    "value": "قطع أصلية",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "قطع أصلية",
                     "minLength": 0,
-                    "maxLength": 20
+                    "maxLength": 20,
+                    "multilanguage": true
                 },
                 {
                     "type": "static",
@@ -2075,39 +2184,42 @@
                     "icon": "sicon-format-text-alt",
                     "label": "العنوان: الدفع",
                     "id": "payment_title",
-                    "value": "دفع آمن",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "دفع آمن",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "السطر الصغير: الدفع",
                     "id": "payment_text",
-                    "value": "مدى وApple Pay",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "مدى وApple Pay",
                     "minLength": 0,
-                    "maxLength": 60
+                    "maxLength": 60,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "نص الجوال (كلمتان): الدفع",
                     "id": "payment_short",
-                    "value": "دفع آمن",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "دفع آمن",
                     "minLength": 0,
-                    "maxLength": 20
+                    "maxLength": 20,
+                    "multilanguage": true
                 },
                 {
                     "type": "static",
@@ -2161,9 +2273,11 @@
                     "id": "pay_tabby_title",
                     "format": "text",
                     "required": false,
-                    "value": "قسّمها على 4 دفعات وارتاح",
+                    "value": null,
                     "description": null,
-                    "maxLength": 80
+                    "maxLength": 80,
+                    "placeholder": "قسّمها على 4 دفعات وارتاح",
+                    "multilanguage": true
                 },
                 {
                     "type": "items",
@@ -2227,9 +2341,9 @@
                     "id": "pay_tamara_show",
                     "format": "switch",
                     "required": false,
-                    "value": false,
-                    "selected": false,
-                    "description": "تظهر فقط إذا كان تمارا مفعّلًا في طرق الدفع بالمتجر (أو مع «إظهار شريط التقسيط للاختبار»)"
+                    "value": true,
+                    "selected": true,
+                    "description": "يظهر تلقائيًا فقط إذا كانت تمارا مفعّلة في طرق الدفع في سلة. أطفئه لإخفائه دائمًا"
                 },
                 {
                     "type": "string",
@@ -2238,9 +2352,11 @@
                     "id": "pay_tamara_title",
                     "format": "text",
                     "required": false,
-                    "value": "قسّمها على دفعات مع تمارا",
+                    "value": null,
                     "description": null,
-                    "maxLength": 80
+                    "maxLength": 80,
+                    "placeholder": "قسّمها على دفعات مع تمارا",
+                    "multilanguage": true
                 },
                 {
                     "type": "items",
@@ -2314,26 +2430,28 @@
                     "icon": "sicon-format-text-alt",
                     "label": "عنوان القسم",
                     "id": "title",
-                    "value": "تسوّق حسب الفئة",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "تسوّق حسب الفئة",
                     "minLength": 0,
-                    "maxLength": 60
+                    "maxLength": 60,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "نص رابط «الكل»",
                     "id": "all_label",
-                    "value": "كل المنتجات",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "كل المنتجات",
                     "minLength": 0,
-                    "maxLength": 30
+                    "maxLength": 30,
+                    "multilanguage": true
                 },
                 {
                     "type": "items",
@@ -2396,7 +2514,8 @@
                             "description": null,
                             "placeholder": null,
                             "minLength": 0,
-                            "maxLength": 24
+                            "maxLength": 24,
+                            "multilanguage": true
                         },
                         {
                             "type": "items",
@@ -2604,13 +2723,14 @@
                     "icon": "sicon-format-text-alt",
                     "label": "عنوان القسم",
                     "id": "title",
-                    "value": "مختارات رايح",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "مختارات رايح",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "id": "source",
@@ -2702,13 +2822,14 @@
                     "icon": "sicon-format-text-alt",
                     "label": "نص رابط «عرض الكل»",
                     "id": "all_label",
-                    "value": "عرض الكل",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "عرض الكل",
                     "minLength": 0,
-                    "maxLength": 20
+                    "maxLength": 20,
+                    "multilanguage": true
                 },
                 {
                     "type": "items",
@@ -2772,39 +2893,42 @@
                     "icon": "sicon-format-text-alt",
                     "label": "العنوان",
                     "id": "title",
-                    "value": "محتار وش تختار؟",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "محتار وش تختار؟",
                     "minLength": 0,
-                    "maxLength": 60
+                    "maxLength": 60,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-typography",
                     "label": "الوصف",
                     "id": "description",
-                    "value": "جاوب 4 أسئلة ونرشّح لك الأنسب في 30 ثانية",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "جاوب 4 أسئلة ونرشّح لك الأنسب في 30 ثانية",
                     "minLength": 0,
-                    "maxLength": 120
+                    "maxLength": 120,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "نص الزر",
                     "id": "cta",
-                    "value": "ابدأ",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "ابدأ",
                     "minLength": 0,
-                    "maxLength": 20
+                    "maxLength": 20,
+                    "multilanguage": true
                 }
             ]
         },
@@ -2829,39 +2953,42 @@
                     "icon": "sicon-format-text-alt",
                     "label": "السطر الصغير فوق العنوان",
                     "id": "eyebrow",
-                    "value": "فيديوهات حقيقية",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "فيديوهات حقيقية",
                     "minLength": 0,
-                    "maxLength": 60
+                    "maxLength": 60,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "عنوان القسم",
                     "id": "title",
-                    "value": "شوف المنتج على الطبيعة",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "شوف المنتج على الطبيعة",
                     "minLength": 0,
-                    "maxLength": 60
+                    "maxLength": 60,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-typography",
                     "label": "الوصف",
                     "id": "description",
-                    "value": "فيديوهات حقيقية لمنتجاتنا وهي تشتغل. اضغط وشوف قبل ما تطلب.",
+                    "value": null,
                     "format": "textarea",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "فيديوهات حقيقية لمنتجاتنا وهي تشتغل. اضغط وشوف قبل ما تطلب.",
                     "minLength": 0,
-                    "maxLength": 160
+                    "maxLength": 160,
+                    "multilanguage": true
                 }
             ]
         },
@@ -2886,26 +3013,28 @@
                     "icon": "sicon-format-text-alt",
                     "label": "العنوان",
                     "id": "title",
-                    "value": "معك بعد الشراء",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "معك بعد الشراء",
                     "minLength": 0,
-                    "maxLength": 60
+                    "maxLength": 60,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-typography",
                     "label": "الوصف",
                     "id": "description",
-                    "value": "ضمان، قطع غيار أصلية، ودعم على الواتساب",
+                    "value": null,
                     "format": "textarea",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "ضمان، قطع غيار أصلية، ودعم على الواتساب",
                     "minLength": 0,
-                    "maxLength": 160
+                    "maxLength": 160,
+                    "multilanguage": true
                 },
                 {
                     "type": "static",
@@ -2917,26 +3046,28 @@
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 1: العنوان",
                     "id": "warranty_title",
-                    "value": "ضمان رايح",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "ضمان رايح",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 1: السطر",
                     "id": "warranty_text",
-                    "value": "على عيوب التصنيع، نستبدل أو نصلّح بدون تعقيد",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "على عيوب التصنيع، نستبدل أو نصلّح بدون تعقيد",
                     "minLength": 0,
-                    "maxLength": 90
+                    "maxLength": 90,
+                    "multilanguage": true
                 },
                 {
                     "type": "static",
@@ -2948,26 +3079,28 @@
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 2: العنوان",
                     "id": "service_title",
-                    "value": "قطع غيار أصلية",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "قطع غيار أصلية",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 2: السطر",
                     "id": "service_text",
-                    "value": "قطع مناسبة لموديلك، اختر اللي تحتاجه",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "قطع مناسبة لموديلك، اختر اللي تحتاجه",
                     "minLength": 0,
-                    "maxLength": 90
+                    "maxLength": 90,
+                    "multilanguage": true
                 },
                 {
                     "type": "static",
@@ -2979,26 +3112,28 @@
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 3: العنوان",
                     "id": "returns_title",
-                    "value": "استرجاع سهل",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "استرجاع سهل",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 3: السطر",
                     "id": "returns_text",
-                    "value": "حسب سياسة الاسترجاع",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "حسب سياسة الاسترجاع",
                     "minLength": 0,
-                    "maxLength": 90
+                    "maxLength": 90,
+                    "multilanguage": true
                 },
                 {
                     "type": "items",
@@ -3034,26 +3169,28 @@
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 4: العنوان",
                     "id": "support_title",
-                    "value": "دعم على الواتساب",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "دعم على الواتساب",
                     "minLength": 0,
-                    "maxLength": 40
+                    "maxLength": 40,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "البطاقة 4: السطر",
                     "id": "support_text",
-                    "value": "نرد عليك ونساعدك تختار أو تصلّح",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "نرد عليك ونساعدك تختار أو تصلّح",
                     "minLength": 0,
-                    "maxLength": 90
+                    "maxLength": 90,
+                    "multilanguage": true
                 },
                 {
                     "type": "static",
@@ -3065,39 +3202,42 @@
                     "icon": "sicon-format-text-alt",
                     "label": "شريط المساعدة: النص",
                     "id": "help_text",
-                    "value": "عندك سؤال؟ كلّمنا على الواتساب ونرد عليك بسرعة",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "عندك سؤال؟ كلّمنا على الواتساب ونرد عليك بسرعة",
                     "minLength": 0,
-                    "maxLength": 120
+                    "maxLength": 120,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "شريط المساعدة: زر الواتساب",
                     "id": "wa_label",
-                    "value": "كلّمنا واتساب",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "كلّمنا واتساب",
                     "minLength": 0,
-                    "maxLength": 30
+                    "maxLength": 30,
+                    "multilanguage": true
                 },
                 {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "شريط المساعدة: زر المساعد",
                     "id": "finder_label",
-                    "value": "ساعدني أختار",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "description": null,
-                    "placeholder": null,
+                    "placeholder": "ساعدني أختار",
                     "minLength": 0,
-                    "maxLength": 30
+                    "maxLength": 30,
+                    "multilanguage": true
                 }
             ]
         },
